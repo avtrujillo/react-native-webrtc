@@ -693,6 +693,7 @@
       }
     },
     "options": {
+      "declaration": true,
       "target": 99,
       "module": 99,
       "lib": [
