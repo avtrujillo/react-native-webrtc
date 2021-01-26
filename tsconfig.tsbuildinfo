@@ -307,8 +307,8 @@
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "b3e0a14453ba5bcc549e305c60e572a46e64cb089372062cd8a1a55892461e10",
-        "signature": "7c3edfdfb5339755334d2056f8f5d9e4eb9fdccb454f77fb4d88e5c42f56426a",
+        "version": "7bc75992694730b1bf56323dbbed5fb2baf392aa4d04d75d9cd368e1f04e7cd9",
+        "signature": "f9a6b7e604dec446a5232ea6dc59624a4b1ab34b2d7bd66bb05927f41cd37251",
         "affectsGlobalScope": false
       },
       "./src/metro.config.macos.js": {
@@ -1715,10 +1715,13 @@
         "./src/MediaStream.ts",
         "./src/MediaStreamTrack.ts",
         "./src/Permissions.ts",
+        "./src/RTCDataChannel.ts",
         "./src/RTCIceCandidate.ts",
         "./src/RTCPeerConnection.ts",
         "./src/RTCSessionDescription.ts",
-        "./src/RTCView.ts"
+        "./src/RTCView.ts",
+        "./src/getDisplayMedia.ts",
+        "./src/getUserMedia.ts"
       ],
       "./src/metro.config.macos.js": [
         "../../../node_modules/@types/node/fs.d.ts",
@@ -2590,10 +2593,13 @@
         "./src/MediaStream.ts",
         "./src/MediaStreamTrack.ts",
         "./src/Permissions.ts",
+        "./src/RTCDataChannel.ts",
         "./src/RTCIceCandidate.ts",
         "./src/RTCPeerConnection.ts",
         "./src/RTCSessionDescription.ts",
-        "./src/RTCView.ts"
+        "./src/RTCView.ts",
+        "./src/getDisplayMedia.ts",
+        "./src/getUserMedia.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
