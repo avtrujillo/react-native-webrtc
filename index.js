@@ -1,5 +1,5 @@
 'use strict';
-export { RTCPeerConnection } from './RTCPeerConnection';
+export { RTCPeerConnection, } from './RTCPeerConnection';
 export { RTCIceCandidate } from './RTCIceCandidate';
 export { RTCSessionDescription } from './RTCSessionDescription';
 export { RTCView } from './RTCView';

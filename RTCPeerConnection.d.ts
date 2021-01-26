@@ -3,10 +3,10 @@ import { MediaStreamTrack } from './MediaStreamTrack';
 import { RTCDataChannel } from './RTCDataChannel';
 import { RTCSessionDescription } from './RTCSessionDescription';
 import { RTCIceCandidate } from './RTCIceCandidate';
-declare type RTCSignalingState = 'stable' | 'have-local-offer' | 'have-remote-offer' | 'have-local-pranswer' | 'have-remote-pranswer' | 'closed';
-declare type RTCIceGatheringState = 'new' | 'gathering' | 'complete';
-declare type RTCPeerConnectionState = 'new' | 'connecting' | 'connected' | 'disconnected' | 'failed' | 'closed';
-declare type RTCIceConnectionState = 'new' | 'checking' | 'connected' | 'completed' | 'failed' | 'disconnected' | 'closed';
+export declare type RTCSignalingState = 'stable' | 'have-local-offer' | 'have-remote-offer' | 'have-local-pranswer' | 'have-remote-pranswer' | 'closed';
+export declare type RTCIceGatheringState = 'new' | 'gathering' | 'complete';
+export declare type RTCPeerConnectionState = 'new' | 'connecting' | 'connected' | 'disconnected' | 'failed' | 'closed';
+export declare type RTCIceConnectionState = 'new' | 'checking' | 'connected' | 'completed' | 'failed' | 'disconnected' | 'closed';
 export declare const PEER_CONNECTION_EVENTS: string[];
 declare const RTCPeerConnection_base: any;
 export declare class RTCPeerConnection extends RTCPeerConnection_base {

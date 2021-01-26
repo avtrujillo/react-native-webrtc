@@ -217,8 +217,8 @@
         "affectsGlobalScope": false
       },
       "./src/MediaStreamTrack.ts": {
-        "version": "d76adb2eac8b341f4c0c3b5018d096d298d0663ec28a5655b901ce70f83a45e4",
-        "signature": "b9f0ea0a6e0daafaf0999116cb6c5014f9d4d607b5a8af6c5326c20d0ee25515",
+        "version": "7a53c0d744d471581212986402833a42068d448a6c389df179c86fee0b69976f",
+        "signature": "cf01ebd7f481b9c5db37cbe4d2a085d197e67bc0545c9e40154706950c5d09de",
         "affectsGlobalScope": false
       },
       "./src/MediaStream.ts": {
@@ -297,8 +297,8 @@
         "affectsGlobalScope": false
       },
       "./src/RTCPeerConnection.ts": {
-        "version": "bda60beeffb087925f738dbdb0c0c2c0ad287145e5c48174acdfbc36a9d82d96",
-        "signature": "c408a359316f0aac90dcb32a93f87a20215248a8b8f4c877e664e7117318b27d",
+        "version": "f89f590c58a6a60cd20a7c753c343614e9efb8b113b23ac7a2832eb9d689407d",
+        "signature": "111108bf298fdbb5a89e928208ef94cea8ddfcc9d1139a688d13476b5716d695",
         "affectsGlobalScope": false
       },
       "./src/RTCView.ts": {
@@ -307,8 +307,8 @@
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "9fd6420f98e92a793eea7295e9ebc20e092c6ce8f81a82a4def26ce3acb31d2f",
-        "signature": "85d6b24b1359db2ba4e2fe319e215355adec27ba2a2c74c630072f461a2ca529",
+        "version": "348527c2837517fddb9f876d9ffe142e89e23b10a9da80bf0541d89f9ec68650",
+        "signature": "b77e2022bde7566f853f48bae70c970a666ae458999e90502e0307ebe9b68ed2",
         "affectsGlobalScope": false
       },
       "./src/metro.config.macos.js": {
@@ -702,7 +702,6 @@
       ],
       "allowJs": true,
       "incremental": true,
-      "isolatedModules": true,
       "strict": true,
       "moduleResolution": 2,
       "baseUrl": "./",

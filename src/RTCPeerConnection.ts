@@ -18,7 +18,7 @@ import {EventEmitter} from './EventEmitter';
 
 const {WebRTCModule} = NativeModules;
 
-type RTCSignalingState =
+export type RTCSignalingState =
   'stable' |
   'have-local-offer' |
   'have-remote-offer' |
@@ -26,12 +26,12 @@ type RTCSignalingState =
   'have-remote-pranswer' |
   'closed';
 
-type RTCIceGatheringState =
+export type RTCIceGatheringState =
   'new' |
   'gathering' |
   'complete';
 
-type RTCPeerConnectionState =
+export type RTCPeerConnectionState =
   'new' |
   'connecting' |
   'connected' |
@@ -39,7 +39,7 @@ type RTCPeerConnectionState =
   'failed' |
   'closed';
 
-type RTCIceConnectionState =
+export type RTCIceConnectionState =
   'new' |
   'checking' |
   'connected' |

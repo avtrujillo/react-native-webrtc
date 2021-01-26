@@ -16,7 +16,7 @@ const MEDIA_STREAM_TRACK_EVENTS = [
   'overconstrained',
 ];
 
-type MediaStreamTrackState = "live" | "ended";
+export type MediaStreamTrackState = "live" | "ended";
 
 export class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
   _constraints: Object;

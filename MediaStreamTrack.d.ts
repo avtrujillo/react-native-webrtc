@@ -1,4 +1,4 @@
-declare type MediaStreamTrackState = "live" | "ended";
+export declare type MediaStreamTrackState = "live" | "ended";
 declare const MediaStreamTrack_base: any;
 export declare class MediaStreamTrack extends MediaStreamTrack_base {
     _constraints: Object;
