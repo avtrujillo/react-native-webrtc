@@ -18,7 +18,7 @@
       "noFallthroughCasesInSwitch": true,
       "resolveJsonModule": true,
       "forceConsistentCasingInFileNames": false,
-      "outDir": "./dist"
+      "outDir": "."
     },
     "exclude": [
       "node_modules",
