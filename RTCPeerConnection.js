@@ -13,7 +13,7 @@ import { RTCEvent } from './RTCEvent';
 import * as RTCUtil from './RTCUtil';
 import { EventEmitter } from './EventEmitter';
 const { WebRTCModule } = NativeModules;
-const PEER_CONNECTION_EVENTS = [
+export const PEER_CONNECTION_EVENTS = [
     'connectionstatechange',
     'icecandidate',
     'icecandidateerror',
@@ -28,7 +28,7 @@ const PEER_CONNECTION_EVENTS = [
     'removestream',
 ];
 let nextPeerConnectionId = 0;
-export default class RTCPeerConnection extends EventTarget(PEER_CONNECTION_EVENTS) {
+export class RTCPeerConnection extends EventTarget(PEER_CONNECTION_EVENTS) {
     constructor(configuration) {
         super();
         this.signalingState = 'stable';

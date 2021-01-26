@@ -1,15 +1,14 @@
 'use strict';
-export * from './RTCPeerConnection';
-export * from './RTCIceCandidate';
-export * from './RTCSessionDescription';
-export * from './RTCView';
-export * from './MediaStream';
-export * from './MediaStreamTrack';
-export * from './getUserMedia';
-export * from './getDisplayMedia';
-export * from './RTCDataChannel';
-export * from './RTCIceCandidate';
-export * from './MediaDevices';
+export { RTCPeerConnection } from './RTCPeerConnection';
+export { RTCIceCandidate } from './RTCIceCandidate';
+export { RTCSessionDescription } from './RTCSessionDescription';
+export { RTCView } from './RTCView';
+export { MediaStream } from './MediaStream';
+export { MediaStreamTrack } from './MediaStreamTrack';
+export { getUserMedia } from './getUserMedia';
+export { getDisplayMedia } from './getDisplayMedia';
+export { RTCDataChannel } from './RTCDataChannel';
+export { MediaDevices } from './MediaDevices';
 export { permissions, Permissions } from './Permissions';
 // export {
 //   RTCPeerConnection,

@@ -5,7 +5,7 @@ import { MediaStream } from './MediaStream';
 import { MediaStreamError } from './MediaStreamError';
 import { permissions } from './Permissions';
 const { WebRTCModule } = NativeModules;
-export default function getUserMedia(constraints = {}) {
+export function getUserMedia(constraints = {}) {
     // According to
     // https://www.w3.org/TR/mediacapture-streams/#dom-mediadevices-getusermedia,
     // the constraints argument is a dictionary of type MediaStreamConstraints.

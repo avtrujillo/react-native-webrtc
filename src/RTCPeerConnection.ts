@@ -48,7 +48,7 @@ type RTCIceConnectionState =
   'disconnected' |
   'closed';
 
-const PEER_CONNECTION_EVENTS = [
+export const PEER_CONNECTION_EVENTS = [
   'connectionstatechange',
   'icecandidate',
   'icecandidateerror',
@@ -65,7 +65,7 @@ const PEER_CONNECTION_EVENTS = [
 
 let nextPeerConnectionId = 0;
 
-export default class RTCPeerConnection extends EventTarget(PEER_CONNECTION_EVENTS) {
+export class RTCPeerConnection extends EventTarget(PEER_CONNECTION_EVENTS) {
   localDescription?: RTCSessionDescription;
   remoteDescription?: RTCSessionDescription;
 

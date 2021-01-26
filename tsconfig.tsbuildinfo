@@ -227,8 +227,8 @@
         "affectsGlobalScope": false
       },
       "./src/getDisplayMedia.ts": {
-        "version": "8882cfa303d6470f25a8f06b819922a252bfbffde2a16b89fe9cff1f7df5ae55",
-        "signature": "6caca1205e34c10a097843d4faa78445b101a4c8f611a28410bbe6e3a7b6491c",
+        "version": "360f5291c5400a6341c4d42e0b11da132bdfe394a45de48cef5325386202d8c0",
+        "signature": "f237015c463fa0f92df4c23bb158c61f67679858edc77f044d2c2b1e7d06bbdb",
         "affectsGlobalScope": false
       },
       "./src/Permissions.ts": {
@@ -237,12 +237,12 @@
         "affectsGlobalScope": false
       },
       "./src/getUserMedia.ts": {
-        "version": "201d8b0e33b01c15f8bf4abdfef8a9e9ba39a38cd48361db0d6459c62f3e8ae7",
-        "signature": "1cbb1232f3bd31244017209a82c7c505aa60fb28f84f3b361965fb85ddfdb30d",
+        "version": "6ac9ff55b19f2cc8eea490b7228881a08c7ad4fafcdac5fde543811faebc4d49",
+        "signature": "8b600da66e3e3ff3671a8a901282c7e8a70a2be30b2410926201182fbf0b13bd",
         "affectsGlobalScope": false
       },
       "./src/MediaDevices.ts": {
-        "version": "6ad3e12cbc86fccb88c8d76d7e76768c22fdab086fc2954cb21a94a436dc1030",
+        "version": "8dcf830cc762f410434eed1d1ce1e8ce06ee7342087273865b369faa8566e028",
         "signature": "33bfe77e14e764278628923043bbb17fa704ce7270228c10829098656d238bf5",
         "affectsGlobalScope": false
       },
@@ -297,8 +297,8 @@
         "affectsGlobalScope": false
       },
       "./src/RTCPeerConnection.ts": {
-        "version": "f4ab65e499e08c7e8f0661af5be803fbb84be13c65c234ec9c45dc24425489d6",
-        "signature": "3819511d7c8b871def7649314b2d5f4f2d66131be9840c00c85fd7d7660b2d21",
+        "version": "bda60beeffb087925f738dbdb0c0c2c0ad287145e5c48174acdfbc36a9d82d96",
+        "signature": "c408a359316f0aac90dcb32a93f87a20215248a8b8f4c877e664e7117318b27d",
         "affectsGlobalScope": false
       },
       "./src/RTCView.ts": {
@@ -307,8 +307,8 @@
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "0cbb2f285911c7234da1b420a118d76c0b7bb803908ac5f8cc1a426bbba47d58",
-        "signature": "508bb94f48c4416446c3b1a57487e36070e18746f089b13a4297314283a5c1ca",
+        "version": "9fd6420f98e92a793eea7295e9ebc20e092c6ce8f81a82a4def26ce3acb31d2f",
+        "signature": "85d6b24b1359db2ba4e2fe319e215355adec27ba2a2c74c630072f461a2ca529",
         "affectsGlobalScope": false
       },
       "./src/metro.config.macos.js": {

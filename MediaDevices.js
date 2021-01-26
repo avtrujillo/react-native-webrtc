@@ -1,8 +1,8 @@
 'use strict';
 import { NativeModules } from 'react-native';
 const EventTarget = require('event-target-shim');
-import getDisplayMedia from './getDisplayMedia';
-import getUserMedia from './getUserMedia';
+import { getDisplayMedia } from './getDisplayMedia';
+import { getUserMedia } from './getUserMedia';
 const { WebRTCModule } = NativeModules;
 const MEDIA_DEVICES_EVENTS = [
     'devicechange'

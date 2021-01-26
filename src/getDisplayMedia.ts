@@ -7,7 +7,7 @@ import {MediaStreamError} from './MediaStreamError';
 
 const { WebRTCModule } = NativeModules;
 
-export default function getDisplayMedia(constraints: any) {
+export function getDisplayMedia(constraints: any) {
     if (Platform.OS !== 'android') {
         return Promise.reject(new Error('Unsupported platform'));
     }

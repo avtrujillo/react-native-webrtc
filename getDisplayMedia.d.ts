@@ -1,1 +1,1 @@
-export default function getDisplayMedia(constraints: any): Promise<unknown>;
+export declare function getDisplayMedia(constraints: any): Promise<unknown>;

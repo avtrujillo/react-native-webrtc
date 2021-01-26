@@ -7,8 +7,9 @@ declare type RTCSignalingState = 'stable' | 'have-local-offer' | 'have-remote-of
 declare type RTCIceGatheringState = 'new' | 'gathering' | 'complete';
 declare type RTCPeerConnectionState = 'new' | 'connecting' | 'connected' | 'disconnected' | 'failed' | 'closed';
 declare type RTCIceConnectionState = 'new' | 'checking' | 'connected' | 'completed' | 'failed' | 'disconnected' | 'closed';
+export declare const PEER_CONNECTION_EVENTS: string[];
 declare const RTCPeerConnection_base: any;
-export default class RTCPeerConnection extends RTCPeerConnection_base {
+export declare class RTCPeerConnection extends RTCPeerConnection_base {
     localDescription?: RTCSessionDescription;
     remoteDescription?: RTCSessionDescription;
     signalingState: RTCSignalingState;

@@ -1,1 +1,1 @@
-export default function getUserMedia(constraints?: any): Promise<unknown>;
+export declare function getUserMedia(constraints?: any): Promise<unknown>;
