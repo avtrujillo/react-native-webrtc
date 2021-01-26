@@ -7,6 +7,7 @@ import RTCView from './RTCView';
 export * from './MediaStream';
 export * from './MediaStreamTrack';
 export * from './MediaDevices';
+import mediaDevices from './MediaDevices';
 import permissions from './Permissions';
 
 export {

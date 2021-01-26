@@ -272,8 +272,8 @@
         "affectsGlobalScope": false
       },
       "./src/RTCDataChannel.ts": {
-        "version": "a8a505139332f8aa43a0774d3daedd2873f042aaf77cf9a4ebb1a50daf39da00",
-        "signature": "5e6e81b75d367beebe05b21b5002ab8164aa99aff42f47092bf721ad345d7533",
+        "version": "10f58677feb0b89c55ba13a56c2ac522615515fc2b9e434fafdc497d4a9d621d",
+        "signature": "81f81e876cb2ba1bf1db33d2c0b955c6ff14abde71136724cf432c548a4c4370",
         "affectsGlobalScope": false
       },
       "./src/RTCEvent.ts": {
@@ -307,8 +307,8 @@
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "1bf925f612842756dc8c0ebc7aa514c8d24ef8c7118e82d4de40779b8a2c0aa7",
-        "signature": "375c08e57cbd853bd03001cf754dde4013286e61931712ad43a630d911c16825",
+        "version": "b3e0a14453ba5bcc549e305c60e572a46e64cb089372062cd8a1a55892461e10",
+        "signature": "7c3edfdfb5339755334d2056f8f5d9e4eb9fdccb454f77fb4d88e5c42f56426a",
         "affectsGlobalScope": false
       },
       "./src/metro.config.macos.js": {

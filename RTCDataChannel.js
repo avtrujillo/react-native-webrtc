@@ -6,7 +6,7 @@ import MessageEvent from './MessageEvent';
 import RTCDataChannelEvent from './RTCDataChannelEvent';
 import EventEmitter from './EventEmitter';
 const { WebRTCModule } = NativeModules;
-const DATA_CHANNEL_EVENTS = [
+export const DATA_CHANNEL_EVENTS = [
     'open',
     'message',
     'bufferedamountlow',

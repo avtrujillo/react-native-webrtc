@@ -1,4 +1,4 @@
-declare type RTCDataChannelInit = {
+export declare type RTCDataChannelInit = {
     ordered?: boolean;
     maxPacketLifeTime?: number;
     maxRetransmits?: number;
@@ -7,7 +7,8 @@ declare type RTCDataChannelInit = {
     id?: number;
     maxRetransmitTime?: number;
 };
-declare type RTCDataChannelState = 'connecting' | 'open' | 'closing' | 'closed';
+export declare type RTCDataChannelState = 'connecting' | 'open' | 'closing' | 'closed';
+export declare const DATA_CHANNEL_EVENTS: string[];
 declare const RTCDataChannel_base: any;
 export default class RTCDataChannel extends RTCDataChannel_base {
     _peerConnectionId: number;

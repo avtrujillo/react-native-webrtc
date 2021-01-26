@@ -1,13 +1,22 @@
 'use strict';
-import RTCPeerConnection from './RTCPeerConnection';
-import RTCIceCandidate from './RTCIceCandidate';
-import RTCSessionDescription from './RTCSessionDescription';
+export * from './RTCPeerConnection';
+export * from './RTCIceCandidate';
+export * from './RTCSessionDescription';
 import RTCView from './RTCView';
-import MediaStream from './MediaStream';
-import MediaStreamTrack from './MediaStreamTrack';
+export * from './MediaStream';
+export * from './MediaStreamTrack';
+export * from './MediaDevices';
 import mediaDevices from './MediaDevices';
 import permissions from './Permissions';
-export { RTCPeerConnection, RTCIceCandidate, RTCSessionDescription, RTCView, MediaStream, MediaStreamTrack, mediaDevices, permissions, registerGlobals };
+export { 
+//   RTCPeerConnection,
+//   RTCIceCandidate,
+//   RTCSessionDescription,
+RTCView, 
+//   MediaStream,
+//   MediaStreamTrack,
+//   mediaDevices,
+permissions, registerGlobals };
 function registerGlobals() {
     // Should not happen. React Native has a global navigator object.
     if (typeof navigator !== 'object') {
