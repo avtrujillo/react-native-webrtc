@@ -7,6 +7,12 @@ import RTCView from './RTCView';
 export * from './MediaStream';
 export * from './MediaStreamTrack';
 export * from './MediaDevices';
+
+export * from './getUserMedia';
+export * from './getDisplayMedia';
+export * from './RTCDataChannel';
+export * from './RTCIceCandidate';
+
 import mediaDevices from './MediaDevices';
 import permissions from './Permissions';
 
