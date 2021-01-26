@@ -9,7 +9,7 @@ import EventEmitter from './EventEmitter';
 
 const {WebRTCModule} = NativeModules;
 
-type RTCDataChannelInit = {
+export type RTCDataChannelInit = {
   ordered?: boolean;
   maxPacketLifeTime?: number;
   maxRetransmits?: number;
@@ -20,13 +20,13 @@ type RTCDataChannelInit = {
   maxRetransmitTime?: number,
 };
 
-type RTCDataChannelState =
+export type RTCDataChannelState =
   'connecting' |
   'open' |
   'closing' |
   'closed';
 
-const DATA_CHANNEL_EVENTS = [
+export const DATA_CHANNEL_EVENTS = [
   'open',
   'message',
   'bufferedamountlow',
