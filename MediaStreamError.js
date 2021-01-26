@@ -1,5 +1,5 @@
 'use strict';
-export default class MediaStreamError {
+export class MediaStreamError {
     constructor(error) {
         this.name = error.name;
         this.message = error.message;

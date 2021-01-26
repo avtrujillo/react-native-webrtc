@@ -1,8 +1,8 @@
 'use strict';
 
-import type MediaStreamTrack from './MediaStreamTrack';
+import {MediaStreamTrack} from './MediaStreamTrack';
 
-export default class MediaStreamTrackEvent {
+export class MediaStreamTrackEvent {
   type: string;
   track?: MediaStreamTrack;
   constructor(type: any, eventInitDict: any) {

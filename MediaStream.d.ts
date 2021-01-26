@@ -1,6 +1,7 @@
-import MediaStreamTrack from './MediaStreamTrack';
+import { MediaStreamTrack } from './MediaStreamTrack';
+export declare const MEDIA_STREAM_EVENTS: string[];
 declare const MediaStream_base: any;
-export default class MediaStream extends MediaStream_base {
+export declare class MediaStream extends MediaStream_base {
     id: string;
     active: boolean;
     onactive?: Function;

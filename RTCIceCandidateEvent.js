@@ -1,5 +1,5 @@
 'use strict';
-export default class RTCIceCandidateEvent {
+export class RTCIceCandidateEvent {
     constructor(type, eventInitDict) {
         this.type = type.toString();
         this.candidate = null;

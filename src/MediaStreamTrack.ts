@@ -2,8 +2,8 @@
 
 import {NativeModules} from 'react-native';
 const EventTarget = require('event-target-shim');
-import MediaStreamErrorEvent from './MediaStreamErrorEvent';
-import type MediaStreamError from './MediaStreamError';
+import {MediaStreamErrorEvent} from './MediaStreamErrorEvent';
+import {MediaStreamError} from './MediaStreamError';
 import { deepClone } from './RTCUtil';
 
 const {WebRTCModule} = NativeModules;
@@ -18,7 +18,7 @@ const MEDIA_STREAM_TRACK_EVENTS = [
 
 type MediaStreamTrackState = "live" | "ended";
 
-class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
+export class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
   _constraints: Object;
   _enabled: boolean;
   id: string;
@@ -110,5 +110,3 @@ class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
     WebRTCModule.mediaStreamTrackRelease(this.id);
   }
 }
-
-export default MediaStreamTrack;

@@ -1,17 +1,17 @@
 'use strict';
 const EventTarget = require('event-target-shim');
 import { NativeModules } from 'react-native';
-import MediaStream from './MediaStream';
-import MediaStreamEvent from './MediaStreamEvent';
-import MediaStreamTrackEvent from './MediaStreamTrackEvent';
-import RTCDataChannel from './RTCDataChannel';
-import RTCDataChannelEvent from './RTCDataChannelEvent';
-import RTCSessionDescription from './RTCSessionDescription';
-import RTCIceCandidate from './RTCIceCandidate';
-import RTCIceCandidateEvent from './RTCIceCandidateEvent';
-import RTCEvent from './RTCEvent';
+import { MediaStream } from './MediaStream';
+import { MediaStreamEvent } from './MediaStreamEvent';
+import { MediaStreamTrackEvent } from './MediaStreamTrackEvent';
+import { RTCDataChannel } from './RTCDataChannel';
+import { RTCDataChannelEvent } from './RTCDataChannelEvent';
+import { RTCSessionDescription } from './RTCSessionDescription';
+import { RTCIceCandidate } from './RTCIceCandidate';
+import { RTCIceCandidateEvent } from './RTCIceCandidateEvent';
+import { RTCEvent } from './RTCEvent';
 import * as RTCUtil from './RTCUtil';
-import EventEmitter from './EventEmitter';
+import { EventEmitter } from './EventEmitter';
 const { WebRTCModule } = NativeModules;
 const PEER_CONNECTION_EVENTS = [
     'connectionstatechange',

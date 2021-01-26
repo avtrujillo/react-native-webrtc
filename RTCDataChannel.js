@@ -2,9 +2,9 @@
 import { NativeModules } from 'react-native';
 import base64 from 'base64-js';
 const EventTarget = require('event-target-shim');
-import MessageEvent from './MessageEvent';
-import RTCDataChannelEvent from './RTCDataChannelEvent';
-import EventEmitter from './EventEmitter';
+import { MessageEvent } from './MessageEvent';
+import { RTCDataChannelEvent } from './RTCDataChannelEvent';
+import { EventEmitter } from './EventEmitter';
 const { WebRTCModule } = NativeModules;
 export const DATA_CHANNEL_EVENTS = [
     'open',
@@ -15,7 +15,7 @@ export const DATA_CHANNEL_EVENTS = [
 ];
 class ResourceInUse extends Error {
 }
-export default class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
+export class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
     constructor(peerConnectionId, label, dataChannelDict) {
         super();
         this.binaryType = 'arraybuffer'; // we only support 'arraybuffer'

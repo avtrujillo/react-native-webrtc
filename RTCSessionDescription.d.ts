@@ -1,4 +1,4 @@
-export default class RTCSessionDescription {
+export declare class RTCSessionDescription {
     sdp: string;
     type: string | null;
     constructor(info?: {

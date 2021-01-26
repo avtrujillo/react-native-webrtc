@@ -1,8 +1,8 @@
-import MediaStream from './MediaStream';
-import MediaStreamTrack from './MediaStreamTrack';
-import RTCDataChannel from './RTCDataChannel';
-import RTCSessionDescription from './RTCSessionDescription';
-import RTCIceCandidate from './RTCIceCandidate';
+import { MediaStream } from './MediaStream';
+import { MediaStreamTrack } from './MediaStreamTrack';
+import { RTCDataChannel } from './RTCDataChannel';
+import { RTCSessionDescription } from './RTCSessionDescription';
+import { RTCIceCandidate } from './RTCIceCandidate';
 declare type RTCSignalingState = 'stable' | 'have-local-offer' | 'have-remote-offer' | 'have-local-pranswer' | 'have-remote-pranswer' | 'closed';
 declare type RTCIceGatheringState = 'new' | 'gathering' | 'complete';
 declare type RTCPeerConnectionState = 'new' | 'connecting' | 'connected' | 'disconnected' | 'failed' | 'closed';

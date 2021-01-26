@@ -1,6 +1,6 @@
 'use strict';
 
-export default class MessageEvent {
+export class MessageEvent {
   type: string;
   data?: string | ArrayBuffer | Blob;
   origin?: string;

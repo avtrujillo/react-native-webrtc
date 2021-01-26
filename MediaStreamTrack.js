@@ -10,7 +10,7 @@ const MEDIA_STREAM_TRACK_EVENTS = [
     // see: https://www.w3.org/TR/mediacapture-streams/#constrainable-interface
     'overconstrained',
 ];
-class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
+export class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
     constructor(info) {
         super();
         this._constraints = info.constraints || {};
@@ -75,4 +75,3 @@ class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
         WebRTCModule.mediaStreamTrackRelease(this.id);
     }
 }
-export default MediaStreamTrack;

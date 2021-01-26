@@ -1,8 +1,8 @@
 'use strict';
 
-import type MediaStreamError from './MediaStreamError';
+import type {MediaStreamError} from './MediaStreamError';
 
-export default class MediaStreamErrorEvent {
+export class MediaStreamErrorEvent {
   type: string;
   error?: MediaStreamError;
   constructor(type: any, eventInitDict: any) {

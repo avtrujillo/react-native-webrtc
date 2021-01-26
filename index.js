@@ -5,10 +5,9 @@ export * from './RTCSessionDescription';
 import RTCView from './RTCView';
 export * from './MediaStream';
 export * from './MediaStreamTrack';
-export * from './MediaDevices';
 export * from './getUserMedia';
 export * from './getDisplayMedia';
-export * from './RTCDataChannel';
+export { RTCDataChannel } from './RTCDataChannel';
 export * from './RTCIceCandidate';
 import mediaDevices from './MediaDevices';
 import permissions from './Permissions';
@@ -19,8 +18,7 @@ export {
 RTCView, 
 //   MediaStream,
 //   MediaStreamTrack,
-//   mediaDevices,
-permissions, registerGlobals };
+mediaDevices, permissions, registerGlobals };
 function registerGlobals() {
     // Should not happen. React Native has a global navigator object.
     if (typeof navigator !== 'object') {

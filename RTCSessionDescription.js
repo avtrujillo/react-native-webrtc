@@ -1,5 +1,5 @@
 'use strict';
-export default class RTCSessionDescription {
+export class RTCSessionDescription {
     constructor(info = { type: null, sdp: '' }) {
         this.sdp = info.sdp;
         this.type = info.type;

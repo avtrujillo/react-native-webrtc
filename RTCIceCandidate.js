@@ -1,5 +1,5 @@
 'use strict';
-export default class RTCIceCandidate {
+export class RTCIceCandidate {
     constructor(info) {
         this.candidate = info.candidate;
         this.sdpMLineIndex = info.sdpMLineIndex;

@@ -1,4 +1,4 @@
-export default class MediaStreamError {
+export declare class MediaStreamError {
     name: string;
     message?: string;
     constraintName?: string;

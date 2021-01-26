@@ -1,5 +1,5 @@
 'use strict';
-export default class RTCDataChannelEvent {
+export class RTCDataChannelEvent {
     constructor(type, eventInitDict) {
         this.type = type.toString();
         Object.assign(this, eventInitDict);

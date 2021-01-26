@@ -1,7 +1,7 @@
 'use strict';
 import { Platform, NativeModules } from 'react-native';
-import MediaStream from './MediaStream';
-import MediaStreamError from './MediaStreamError';
+import { MediaStream } from './MediaStream';
+import { MediaStreamError } from './MediaStreamError';
 const { WebRTCModule } = NativeModules;
 export default function getDisplayMedia(constraints) {
     if (Platform.OS !== 'android') {

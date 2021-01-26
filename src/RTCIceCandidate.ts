@@ -1,6 +1,6 @@
 'use strict';
 
-export default class RTCIceCandidate {
+export class RTCIceCandidate {
   candidate: string;
   sdpMLineIndex: number;
   sdpMid: string;

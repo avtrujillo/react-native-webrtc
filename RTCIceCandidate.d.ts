@@ -1,4 +1,4 @@
-export default class RTCIceCandidate {
+export declare class RTCIceCandidate {
     candidate: string;
     sdpMLineIndex: number;
     sdpMid: string;

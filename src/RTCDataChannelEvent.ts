@@ -1,8 +1,8 @@
 'use strict';
 
-import type RTCDataChannel from './RTCDataChannel';
+import {RTCDataChannel} from './RTCDataChannel';
 
-export default class RTCDataChannelEvent {
+export class RTCDataChannelEvent {
   type: string;
   channel?: RTCDataChannel;
   constructor(type: any, eventInitDict: any) {

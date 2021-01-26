@@ -10,7 +10,7 @@ export declare type RTCDataChannelInit = {
 export declare type RTCDataChannelState = 'connecting' | 'open' | 'closing' | 'closed';
 export declare const DATA_CHANNEL_EVENTS: string[];
 declare const RTCDataChannel_base: any;
-export default class RTCDataChannel extends RTCDataChannel_base {
+export declare class RTCDataChannel extends RTCDataChannel_base {
     _peerConnectionId: number;
     binaryType: 'arraybuffer';
     bufferedAmount: number;

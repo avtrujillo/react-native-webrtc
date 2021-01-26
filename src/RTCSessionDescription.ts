@@ -1,6 +1,6 @@
 'use strict';
 
-export default class RTCSessionDescription {
+export class RTCSessionDescription {
   sdp: string;
   type: string | null;
 

@@ -1,6 +1,6 @@
 'use strict';
 
-export default class MediaStreamError {
+export class MediaStreamError {
 
   name: string;
   message?: string;

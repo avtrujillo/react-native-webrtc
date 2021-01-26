@@ -6,11 +6,12 @@ export * from './RTCSessionDescription';
 import RTCView from './RTCView';
 export * from './MediaStream';
 export * from './MediaStreamTrack';
-export * from './MediaDevices';
 
 export * from './getUserMedia';
 export * from './getDisplayMedia';
-export * from './RTCDataChannel';
+export {
+	RTCDataChannel
+} from './RTCDataChannel';
 export * from './RTCIceCandidate';
 
 import mediaDevices from './MediaDevices';
@@ -23,7 +24,7 @@ export {
   RTCView,
 //   MediaStream,
 //   MediaStreamTrack,
-//   mediaDevices,
+  mediaDevices,
   permissions,
   registerGlobals
 };

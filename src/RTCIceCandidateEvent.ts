@@ -1,8 +1,8 @@
 'use strict';
 
-import type RTCIceCandidate from './RTCIceCandidate';
+import {RTCIceCandidate} from './RTCIceCandidate';
 
-export default class RTCIceCandidateEvent {
+export class RTCIceCandidateEvent {
   type: string;
   candidate?: RTCIceCandidate | null;
   constructor(type: any, eventInitDict: any) {

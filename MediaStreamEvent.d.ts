@@ -1,5 +1,5 @@
-import type MediaStream from './MediaStream';
-export default class MediaStreamEvent {
+import { MediaStream } from './MediaStream';
+export declare class MediaStreamEvent {
     type: string;
     stream?: MediaStream;
     constructor(type: any, eventInitDict: any);
