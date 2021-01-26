@@ -8,7 +8,7 @@ declare type PermissionDescriptor = {
  * Class implementing a subset of W3C's Permissions API as defined by:
  * https://www.w3.org/TR/permissions/
  */
-declare class Permissions {
+export declare class Permissions {
     /**
      * Possible result values for {@link query}, in accordance with:
      * https://www.w3.org/TR/permissions/#status-of-a-permission
@@ -50,5 +50,5 @@ declare class Permissions {
      */
     request(permissionDesc: PermissionDescriptor): any;
 }
-declare const _default: Permissions;
-export default _default;
+export declare const permissions: Permissions;
+export {};

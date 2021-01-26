@@ -3,7 +3,7 @@ import { NativeModules } from 'react-native';
 import * as RTCUtil from './RTCUtil';
 import { MediaStream } from './MediaStream';
 import { MediaStreamError } from './MediaStreamError';
-import permissions from './Permissions';
+import { permissions } from './Permissions';
 const { WebRTCModule } = NativeModules;
 export default function getUserMedia(constraints = {}) {
     // According to

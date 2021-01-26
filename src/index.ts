@@ -3,33 +3,31 @@
 export * from './RTCPeerConnection';
 export * from './RTCIceCandidate';
 export * from './RTCSessionDescription';
-import RTCView from './RTCView';
+export * from './RTCView';
 export * from './MediaStream';
 export * from './MediaStreamTrack';
 
 export * from './getUserMedia';
 export * from './getDisplayMedia';
-export {
-	RTCDataChannel
-} from './RTCDataChannel';
+export * from './RTCDataChannel';
 export * from './RTCIceCandidate';
 
-import mediaDevices from './MediaDevices';
-import permissions from './Permissions';
+export * from './MediaDevices';
+export {permissions, Permissions} from './Permissions';
 
-export {
+// export {
 //   RTCPeerConnection,
 //   RTCIceCandidate,
 //   RTCSessionDescription,
-  RTCView,
+//   RTCView,
 //   MediaStream,
 //   MediaStreamTrack,
-  mediaDevices,
-  permissions,
-  registerGlobals
-};
+//   mediaDevices,
+//   permissions,
+//   registerGlobals
+// };
 
-function registerGlobals() {
+export function registerGlobals() {
 	// Should not happen. React Native has a global navigator object.
 	if (typeof navigator !== 'object') {
 		throw new Error('navigator is not an object');
@@ -39,6 +37,7 @@ function registerGlobals() {
 		// @ts-ignore
 		navigator.mediaDevices = {};
 	}
+	let mediaDevices = new MediaDevices()
 	// @ts-ignore
 	navigator.mediaDevices.getUserMedia =
 		mediaDevices.getUserMedia.bind(mediaDevices);

@@ -1,2 +1,1 @@
-declare const View: import("react-native").HostComponent<unknown>;
-export default View;
+export declare const RTCView: import("react-native").HostComponent<unknown>;

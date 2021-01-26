@@ -15,7 +15,7 @@ type PermissionDescriptor = {
  * Class implementing a subset of W3C's Permissions API as defined by:
  * https://www.w3.org/TR/permissions/
  */
-class Permissions {
+export class Permissions {
     /**
      * Possible result values for {@link query}, in accordance with:
      * https://www.w3.org/TR/permissions/#status-of-a-permission
@@ -122,4 +122,4 @@ class Permissions {
     }
 }
 
-export default new Permissions();
+export const permissions = new Permissions();

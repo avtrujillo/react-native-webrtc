@@ -12,7 +12,7 @@ const MEDIA_DEVICES_EVENTS = [
     'devicechange'
 ];
 
-class MediaDevices extends EventTarget(MEDIA_DEVICES_EVENTS) {
+export class MediaDevices extends EventTarget(MEDIA_DEVICES_EVENTS) {
     // TODO: implement.
     // @ts-ignore
     ondevicechange: ?Function;
@@ -49,4 +49,4 @@ class MediaDevices extends EventTarget(MEDIA_DEVICES_EVENTS) {
     }
 }
 
-export default new MediaDevices();
+// export default new MediaDevices();

@@ -2,7 +2,7 @@
 import { NativeModules, requireNativeComponent, } from 'react-native';
 import PropTypes from 'prop-types';
 const { WebRTCModule } = NativeModules;
-const RTCView = {
+const RTCVideoView = {
     name: 'RTCVideoView',
     propTypes: {
         /**
@@ -46,7 +46,7 @@ const RTCView = {
     },
 };
 // @ts-ignore
-const View = requireNativeComponent('RTCVideoView', RTCView, { nativeOnly: {
+export const RTCView = requireNativeComponent('RTCVideoView', RTCVideoView, { nativeOnly: {
         testID: true,
         accessibilityComponentType: true,
         renderToHardwareTextureAndroid: true,
@@ -56,4 +56,3 @@ const View = requireNativeComponent('RTCVideoView', RTCView, { nativeOnly: {
         onLayout: true,
         nativeID: true,
     } });
-export default View;

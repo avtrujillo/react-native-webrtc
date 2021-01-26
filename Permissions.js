@@ -5,7 +5,7 @@ const { WebRTCModule } = NativeModules;
  * Class implementing a subset of W3C's Permissions API as defined by:
  * https://www.w3.org/TR/permissions/
  */
-class Permissions {
+export class Permissions {
     constructor() {
         /**
          * Possible result values for {@link query}, in accordance with:
@@ -109,4 +109,4 @@ class Permissions {
         }
     }
 }
-export default new Permissions();
+export const permissions = new Permissions();

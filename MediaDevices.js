@@ -7,7 +7,7 @@ const { WebRTCModule } = NativeModules;
 const MEDIA_DEVICES_EVENTS = [
     'devicechange'
 ];
-class MediaDevices extends EventTarget(MEDIA_DEVICES_EVENTS) {
+export class MediaDevices extends EventTarget(MEDIA_DEVICES_EVENTS) {
     /**
      * W3C "Media Capture and Streams" compatible {@code enumerateDevices}
      * implementation.
@@ -37,4 +37,3 @@ class MediaDevices extends EventTarget(MEDIA_DEVICES_EVENTS) {
         return getUserMedia(constraints);
     }
 }
-export default new MediaDevices();

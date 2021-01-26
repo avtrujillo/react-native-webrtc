@@ -1,5 +1,5 @@
 declare const MediaDevices_base: any;
-declare class MediaDevices extends MediaDevices_base {
+export declare class MediaDevices extends MediaDevices_base {
     ondevicechange: ?Function;
     /**
      * W3C "Media Capture and Streams" compatible {@code enumerateDevices}
@@ -24,5 +24,4 @@ declare class MediaDevices extends MediaDevices_base {
      */
     getUserMedia(constraints: any): Promise<unknown>;
 }
-declare const _default: MediaDevices;
-export default _default;
+export {};
