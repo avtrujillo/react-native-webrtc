@@ -9,8 +9,7 @@ import permissions from './Permissions';
 
 const { WebRTCModule } = NativeModules;
 
-
-export default function getUserMedia(constraints = {}) {
+export default function getUserMedia(constraints: any = {}) {
   // According to
   // https://www.w3.org/TR/mediacapture-streams/#dom-mediadevices-getusermedia,
   // the constraints argument is a dictionary of type MediaStreamConstraints.
@@ -27,7 +26,7 @@ export default function getUserMedia(constraints = {}) {
   constraints = RTCUtil.normalizeConstraints(constraints);
 
   // Request required permissions
-  const reqPermissions = [];
+  const reqPermissions: any = [];
   if (constraints.audio) {
     reqPermissions.push(permissions.request({ name: 'microphone' }));
   } else {
@@ -60,9 +59,10 @@ export default function getUserMedia(constraints = {}) {
       audioPerm || (delete constraints.audio);
       videoPerm || (delete constraints.video);
 
-      const success = (id, tracks) => {
+      const success = (id: string, tracks: any) => {
           // Store initial constraints.
-          for (const trackInfo of tracks) {
+          let trackInfo: any;
+          for (trackInfo of tracks) {
             const c = constraints[trackInfo.kind];
             if (typeof c === 'object') {
               trackInfo.constraints = RTCUtil.deepClone(c);
@@ -78,7 +78,7 @@ export default function getUserMedia(constraints = {}) {
           resolve(new MediaStream(info));
       };
 
-      const failure = (type, message) => {
+      const failure = (type: any, message: any) => {
           let error;
           switch (type) {
           case 'TypeError':

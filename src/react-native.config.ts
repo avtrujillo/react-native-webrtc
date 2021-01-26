@@ -1,7 +1,7 @@
 
-'use strict';
+// 'use strict';
 
-const macSwitch = '--use-react-native-macos';
+export const macSwitch = '--use-react-native-macos';
 
 if (process.argv.includes(macSwitch)) {
   process.argv = process.argv.filter(arg => arg !== macSwitch);

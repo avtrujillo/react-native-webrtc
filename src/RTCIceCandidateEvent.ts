@@ -4,8 +4,8 @@ import type RTCIceCandidate from './RTCIceCandidate';
 
 export default class RTCIceCandidateEvent {
   type: string;
-  candidate: RTCIceCandidate;
-  constructor(type, eventInitDict) {
+  candidate?: RTCIceCandidate | null;
+  constructor(type: any, eventInitDict: any) {
     this.type = type.toString();
 
     this.candidate = null;

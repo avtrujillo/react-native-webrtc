@@ -1,7 +1,7 @@
 'use strict';
 
 import {NativeModules} from 'react-native';
-import EventTarget from 'event-target-shim';
+const EventTarget = require('event-target-shim');
 import uuid from 'uuid';
 
 import MediaStreamTrack from './MediaStreamTrack';
@@ -19,10 +19,10 @@ export default class MediaStream extends EventTarget(MEDIA_STREAM_EVENTS) {
   id: string;
   active: boolean = true;
 
-  onactive: ?Function;
-  oninactive: ?Function;
-  onaddtrack: ?Function;
-  onremovetrack: ?Function;
+  onactive?: Function;
+  oninactive?: Function;
+  onaddtrack?: Function;
+  onremovetrack?: Function;
 
   _tracks: Array<MediaStreamTrack> = [];
 
@@ -47,7 +47,7 @@ export default class MediaStream extends EventTarget(MEDIA_STREAM_EVENTS) {
    *   done internally, when the stream is first created in native and the JS wrapper is
    *   built afterwards.
    */
-  constructor(arg) {
+  constructor(arg: any) {
       super();
 
       // Assigm a UUID to start with. It may get overridden for remote streams.
@@ -105,7 +105,7 @@ export default class MediaStream extends EventTarget(MEDIA_STREAM_EVENTS) {
     return this._tracks.slice();
   }
 
-  getTrackById(trackId): ?MediaStreamTrack {
+  getTrackById(trackId: any): MediaStreamTrack | undefined {
     return this._tracks.find(track => track.id === trackId);
   }
 

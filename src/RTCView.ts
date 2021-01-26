@@ -56,6 +56,7 @@ const RTCView = {
   },
 };
 
+// @ts-ignore
 const View = requireNativeComponent('RTCVideoView', RTCView, {nativeOnly: {
   testID: true,
   accessibilityComponentType: true,

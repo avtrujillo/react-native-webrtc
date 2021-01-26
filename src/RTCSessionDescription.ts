@@ -2,7 +2,7 @@
 
 export default class RTCSessionDescription {
   sdp: string;
-  type: string;
+  type: string | null;
 
   constructor(info = {type: null, sdp: ''}) {
     this.sdp = info.sdp;

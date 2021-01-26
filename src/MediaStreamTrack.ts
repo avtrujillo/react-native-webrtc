@@ -1,7 +1,7 @@
 'use strict';
 
 import {NativeModules} from 'react-native';
-import EventTarget from 'event-target-shim';
+const EventTarget = require('event-target-shim');
 import MediaStreamErrorEvent from './MediaStreamErrorEvent';
 import type MediaStreamError from './MediaStreamError';
 import { deepClone } from './RTCUtil';
@@ -29,12 +29,12 @@ class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
   readyState: MediaStreamTrackState;
   remote: boolean;
 
-  onended: ?Function;
-  onmute: ?Function;
-  onunmute: ?Function;
-  overconstrained: ?Function;
+  onended?: Function;
+  onmute?: Function;
+  onunmute?: Function;
+  overconstrained?: Function;
 
-  constructor(info) {
+  constructor(info: any) {
     super();
 
     this._constraints = info.constraints || {};
@@ -54,7 +54,7 @@ class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
     return this._enabled;
   }
 
-  set enabled(enabled: boolean): void {
+  set enabled(enabled: boolean) {
     if (enabled === this._enabled) {
       return;
     }

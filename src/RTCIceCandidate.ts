@@ -5,7 +5,7 @@ export default class RTCIceCandidate {
   sdpMLineIndex: number;
   sdpMid: string;
 
-  constructor(info) {
+  constructor(info: any) {
     this.candidate = info.candidate;
     this.sdpMLineIndex = info.sdpMLineIndex;
     this.sdpMid = info.sdpMid;

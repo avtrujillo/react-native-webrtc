@@ -18,7 +18,7 @@ const STANDARD_OA_OPTIONS = {
     voiceactivitydetection: 'VoiceActivityDetection'
 };
 
-function getDefaultMediaConstraints(mediaType) {
+function getDefaultMediaConstraints(mediaType: string) {
     switch(mediaType) {
     case 'audio':
         return DEFAULT_AUDIO_CONSTRAINTS;
@@ -29,7 +29,7 @@ function getDefaultMediaConstraints(mediaType) {
     }
 }
 
-function extractString(constraints, prop) {
+function extractString(constraints: any, prop: any) {
     const value = constraints[prop];
     const type = typeof value;
 
@@ -44,7 +44,7 @@ function extractString(constraints, prop) {
     }
 }
 
-function extractNumber(constraints, prop) {
+function extractNumber(constraints: any, prop: any) {
     const value = constraints[prop];
     const type = typeof value;
 
@@ -59,7 +59,7 @@ function extractNumber(constraints, prop) {
     }
 }
 
-function normalizeMediaConstraints(constraints, mediaType) {
+function normalizeMediaConstraints(constraints: any, mediaType: string) {
     switch(mediaType) {
     case 'audio':
         return constraints;
@@ -101,7 +101,7 @@ function normalizeMediaConstraints(constraints, mediaType) {
             c.height = DEFAULT_VIDEO_CONSTRAINTS.height;
             c.width = DEFAULT_VIDEO_CONSTRAINTS.width;
         } else if (!c.height) {
-            c.height = Math.round(c.width / ASPECT_RATIO);
+            c.height = c.width ? Math.round(c.width / ASPECT_RATIO) : undefined;
         } else if (!c.width) {
             c.width = Math.round(c.height * ASPECT_RATIO);
         }
@@ -119,7 +119,7 @@ function normalizeMediaConstraints(constraints, mediaType) {
  * @param {Object} obj - object to be cloned
  * @return {Object} cloned obj
  */
-export function deepClone(obj) {
+export function deepClone(obj: any) {
     return JSON.parse(JSON.stringify(obj));
 }
 
@@ -129,8 +129,8 @@ export function deepClone(obj) {
  * @param {Object} options - user supplied options
  * @return {Object} newOptions - normalized options
  */
-export function normalizeOfferAnswerOptions(options = {}) {
-    const newOptions = {};
+export function normalizeOfferAnswerOptions(options: any = {}) {
+    const newOptions: any = {};
 
     if (!options) {
         return newOptions;
@@ -144,6 +144,7 @@ export function normalizeOfferAnswerOptions(options = {}) {
     // Convert standard options into WebRTC internal constant names.
     // See: https://github.com/jitsi/webrtc/blob/0cd6ce4de669bed94ba47b88cb71b9be0341bb81/sdk/media_constraints.cc#L113
     for (const [ key, value ] of Object.entries(options)) {
+        // @ts-ignore
         const newKey = STANDARD_OA_OPTIONS[key.toLowerCase()];
         if (newKey) {
             newOptions[newKey] = String(Boolean(value));
@@ -156,7 +157,7 @@ export function normalizeOfferAnswerOptions(options = {}) {
 /**
  * Normalize the given constraints in something we can work with.
  */
-export function normalizeConstraints(constraints) {
+export function normalizeConstraints(constraints: any) {
     const c = deepClone(constraints);
 
     for (const mediaType of [ 'audio', 'video' ]) {

@@ -28,18 +28,23 @@ function registerGlobals() {
 	}
 
 	if (!navigator.mediaDevices) {
+		// @ts-ignore
 		navigator.mediaDevices = {};
 	}
-
+	// @ts-ignore
 	navigator.mediaDevices.getUserMedia =
 		mediaDevices.getUserMedia.bind(mediaDevices);
-
+	// @ts-ignore
 	navigator.mediaDevices.enumerateDevices =
 		mediaDevices.enumerateDevices.bind(mediaDevices);
-
+	// @ts-ignore
 	global.RTCPeerConnection     = RTCPeerConnection;
+	// @ts-ignore
 	global.RTCIceCandidate       = RTCIceCandidate;
+	// @ts-ignore
 	global.RTCSessionDescription = RTCSessionDescription;
+	// @ts-ignore
 	global.MediaStream           = MediaStream;
+	// @ts-ignore
 	global.MediaStreamTrack      = MediaStreamTrack;
 }

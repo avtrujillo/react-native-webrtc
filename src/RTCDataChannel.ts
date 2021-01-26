@@ -2,7 +2,7 @@
 
 import { NativeModules } from 'react-native';
 import base64 from 'base64-js';
-import EventTarget from 'event-target-shim';
+const EventTarget = require('event-target-shim');
 import MessageEvent from './MessageEvent';
 import RTCDataChannelEvent from './RTCDataChannelEvent';
 import EventEmitter from './EventEmitter';
@@ -43,20 +43,20 @@ export default class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
   binaryType: 'arraybuffer' = 'arraybuffer'; // we only support 'arraybuffer'
   bufferedAmount: number = 0;
   bufferedAmountLowThreshold: number = 0;
-  id: number;
+  id?: number;
   label: string;
-  maxPacketLifeTime: ?number = null;
-  maxRetransmits: ?number = null;
+  maxPacketLifeTime?: number | null = null;
+  maxRetransmits?: number | null = null;
   negotiated: boolean = false;
   ordered: boolean = true;
   protocol: string = '';
   readyState: RTCDataChannelState = 'connecting';
 
-  onopen: ?Function;
-  onmessage: ?Function;
-  onbufferedamountlow: ?Function;
-  onerror: ?Function;
-  onclose: ?Function;
+  onopen?: Function;
+  onmessage?: Function;
+  onbufferedamountlow?: Function;
+  onerror?: Function;
+  onclose?: Function;
 
   constructor(
       peerConnectionId: number,
@@ -91,15 +91,17 @@ export default class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
       return;
     }
 
+    let uint8data: Uint8Array;
+
     // Safely convert the buffer object to an Uint8Array for base64-encoding
     if (ArrayBuffer.isView(data)) {
-      data = new Uint8Array(data.buffer, data.byteOffset, data.byteLength);
+      uint8data = new Uint8Array(data.buffer, data.byteOffset, data.byteLength);
     } else if (data instanceof ArrayBuffer) {
-      data = new Uint8Array(data);
+      uint8data = new Uint8Array(data);
     } else {
       throw new TypeError('Data must be either string, ArrayBuffer, or ArrayBufferView');
     }
-    WebRTCModule.dataChannelSend(this._peerConnectionId, this.id, base64.fromByteArray(data), 'binary');
+    WebRTCModule.dataChannelSend(this._peerConnectionId, this.id, base64.fromByteArray(uint8data), 'binary');
   }
 
   close() {
@@ -111,7 +113,7 @@ export default class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
   }
 
   _unregisterEvents() {
-    this._subscriptions.forEach(e => e.remove());
+    this._subscriptions.forEach((e: any) => e.remove());
     this._subscriptions = [];
   }
 
@@ -125,7 +127,7 @@ export default class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
         this.readyState = ev.state;
         if (this.readyState === 'open') {
           this.dispatchEvent(new RTCDataChannelEvent('open', {channel: this}));
-        } else if (this.readyState === 'close') {
+        } else if (this.readyState === 'closed') {
           this.dispatchEvent(new RTCDataChannelEvent('close', {channel: this}));
           this._unregisterEvents();
         }
