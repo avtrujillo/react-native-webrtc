@@ -212,8 +212,8 @@
         "affectsGlobalScope": false
       },
       "./src/RTCUtil.ts": {
-        "version": "082992bca95b995da156cd95e76360fcca2a2d1efe05abe5f66be8d3143b7fc4",
-        "signature": "943c573a637dcacdc9a7960a552a012e15f752131bdad789d32011a431f6e36c",
+        "version": "774257b849f9ae0521c161cdf5ce12682fbb64e02bf1d17ae787359ee58c3575",
+        "signature": "0dcd4c432b6e8419b557efe5c9f32b3aac7795933669e9bae1221b8184941878",
         "affectsGlobalScope": false
       },
       "./src/MediaStreamTrack.ts": {
@@ -237,13 +237,13 @@
         "affectsGlobalScope": false
       },
       "./src/getUserMedia.ts": {
-        "version": "6ac9ff55b19f2cc8eea490b7228881a08c7ad4fafcdac5fde543811faebc4d49",
-        "signature": "8b600da66e3e3ff3671a8a901282c7e8a70a2be30b2410926201182fbf0b13bd",
+        "version": "4874b8531709ca9afb8dd8f0c35baa4890a1f7227f64563624f963947c264e87",
+        "signature": "b32a746089039c98df320b0bd91e62972b62fa40f124f20116f740054173930e",
         "affectsGlobalScope": false
       },
       "./src/MediaDevices.ts": {
         "version": "8dcf830cc762f410434eed1d1ce1e8ce06ee7342087273865b369faa8566e028",
-        "signature": "33bfe77e14e764278628923043bbb17fa704ce7270228c10829098656d238bf5",
+        "signature": "c3ce40e38be2ceb1da17669055ce4823c094fddf3aaa4f726a8d042dcaade23f",
         "affectsGlobalScope": false
       },
       "./src/MediaStreamEvent.ts": {
@@ -1699,9 +1699,11 @@
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
+        "./node_modules/@types/prop-types/index.d.ts",
         "./node_modules/@types/react-native/index.d.ts",
         "./src/MediaStream.ts",
         "./src/MediaStreamError.ts",
+        "./src/MediaStreamTrack.ts",
         "./src/Permissions.ts",
         "./src/RTCUtil.ts"
       ],
@@ -2559,6 +2561,9 @@
       "./src/EventEmitter.ts": [
         "./node_modules/@types/react-native/index.d.ts"
       ],
+      "./src/MediaDevices.ts": [
+        "./src/MediaStream.ts"
+      ],
       "./src/MediaStream.ts": [
         "./src/MediaStreamTrack.ts"
       ],
@@ -2586,6 +2591,9 @@
       ],
       "./src/RTCView.ts": [
         "./node_modules/@types/react-native/index.d.ts"
+      ],
+      "./src/getUserMedia.ts": [
+        "./src/MediaStream.ts"
       ],
       "./src/index.ts": [
         "./src/MediaDevices.ts",

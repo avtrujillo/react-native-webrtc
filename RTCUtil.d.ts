@@ -15,4 +15,4 @@ export declare function normalizeOfferAnswerOptions(options?: any): any;
 /**
  * Normalize the given constraints in something we can work with.
  */
-export declare function normalizeConstraints(constraints: any): any;
+export declare function normalizeConstraints(constraints: any): MediaStreamConstraints;

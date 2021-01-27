@@ -5,19 +5,19 @@ import { MediaStream } from './MediaStream';
 import { MediaStreamError } from './MediaStreamError';
 import { permissions } from './Permissions';
 const { WebRTCModule } = NativeModules;
-export function getUserMedia(constraints = {}) {
+export function getUserMedia(rawConstraints = {}) {
     // According to
     // https://www.w3.org/TR/mediacapture-streams/#dom-mediadevices-getusermedia,
     // the constraints argument is a dictionary of type MediaStreamConstraints.
-    if (typeof constraints !== 'object') {
+    if (typeof rawConstraints !== 'object') {
         return Promise.reject(new TypeError('constraints is not a dictionary'));
     }
-    if ((typeof constraints.audio === 'undefined' || !constraints.audio)
-        && (typeof constraints.video === 'undefined' || !constraints.video)) {
+    if ((typeof rawConstraints.audio === 'undefined' || !rawConstraints.audio)
+        && (typeof rawConstraints.video === 'undefined' || !rawConstraints.video)) {
         return Promise.reject(new TypeError('audio and/or video is required'));
     }
     // Normalize constraints.
-    constraints = RTCUtil.normalizeConstraints(constraints);
+    let constraints = RTCUtil.normalizeConstraints(rawConstraints);
     // Request required permissions
     const reqPermissions = [];
     if (constraints.audio) {
@@ -49,10 +49,18 @@ export function getUserMedia(constraints = {}) {
             audioPerm || (delete constraints.audio);
             videoPerm || (delete constraints.video);
             const success = (id, tracks) => {
+                // TODO: make sure tracks is an array of tracks rather than a stream
                 // Store initial constraints.
                 let trackInfo;
                 for (trackInfo of tracks) {
-                    const c = constraints[trackInfo.kind];
+                    let c;
+                    if (trackInfo.kind == 'audio') {
+                        c = constraints.audio;
+                    }
+                    else {
+                        c = constraints.video;
+                    }
+                    // const c = constraints[trackInfo.kind];
                     if (typeof c === 'object') {
                         trackInfo.constraints = RTCUtil.deepClone(c);
                     }

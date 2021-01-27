@@ -157,7 +157,7 @@ export function normalizeOfferAnswerOptions(options: any = {}) {
 /**
  * Normalize the given constraints in something we can work with.
  */
-export function normalizeConstraints(constraints: any) {
+export function normalizeConstraints(constraints: any): MediaStreamConstraints {
     const c = deepClone(constraints);
 
     for (const mediaType of [ 'audio', 'video' ]) {
@@ -177,5 +177,5 @@ export function normalizeConstraints(constraints: any) {
         }
     }
 
-    return c;
+    return <MediaStreamConstraints>c;
 }

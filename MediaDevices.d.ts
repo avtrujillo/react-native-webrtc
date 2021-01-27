@@ -22,6 +22,6 @@ export declare class MediaDevices extends MediaDevices_base {
      * @param {*} constraints
      * @returns {Promise}
      */
-    getUserMedia(constraints: any): Promise<unknown>;
+    getUserMedia(constraints: any): Promise<import("./MediaStream").MediaStream>;
 }
 export {};
