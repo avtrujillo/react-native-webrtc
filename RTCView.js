@@ -1,5 +1,6 @@
 'use strict';
-import { NativeModules, requireNativeComponent, } from 'react-native';
+import { NativeModules, } from 'react-native';
+// import requireNativeComponent from 'requireNativeComponent';
 import PropTypes from 'prop-types';
 const { WebRTCModule } = NativeModules;
 const RTCVideoView = {
@@ -45,14 +46,3 @@ const RTCVideoView = {
         zOrder: PropTypes.number
     },
 };
-// @ts-ignore
-export const RTCView = requireNativeComponent('RTCVideoView', RTCVideoView, { nativeOnly: {
-        testID: true,
-        accessibilityComponentType: true,
-        renderToHardwareTextureAndroid: true,
-        accessibilityLabel: true,
-        accessibilityLiveRegion: true,
-        importantForAccessibility: true,
-        onLayout: true,
-        nativeID: true,
-    } });

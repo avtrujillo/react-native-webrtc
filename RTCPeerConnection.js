@@ -1,5 +1,5 @@
 'use strict';
-const EventTarget = require('event-target-shim');
+import EventTarget from 'event-target-shim';
 import { NativeModules } from 'react-native';
 import { MediaStream } from './MediaStream';
 import { MediaStreamEvent } from './MediaStreamEvent';
@@ -28,7 +28,7 @@ export const PEER_CONNECTION_EVENTS = [
     'removestream',
 ];
 let nextPeerConnectionId = 0;
-export class RTCPeerConnection extends EventTarget(PEER_CONNECTION_EVENTS) {
+export class RTCPeerConnection extends EventTarget {
     constructor(configuration) {
         super();
         this.signalingState = 'stable';

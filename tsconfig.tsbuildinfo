@@ -247,8 +247,8 @@
         "affectsGlobalScope": false
       },
       "./src/MediaStreamEvent.ts": {
-        "version": "8a129d876b5242d320bbb19716d4826413d7e91d9816e9646f29eb1b5f1015df",
-        "signature": "bd4bf623cdb97219acfc5db665d8ee3a5d3bf26716e25e20dd97d24a94dee5fe",
+        "version": "dffffb4e842a3c5de562d677a9fe704bdc7e11481d2f130368abaf72b99c8d26",
+        "signature": "e3f0d0fa8f6b3832367b4efcc15717fd2fa432736dacf92a7ef122abf4581947",
         "affectsGlobalScope": false
       },
       "./src/MediaStreamTrackEvent.ts": {
@@ -267,8 +267,8 @@
         "affectsGlobalScope": false
       },
       "./src/RTCDataChannelEvent.ts": {
-        "version": "e905ecfc9cc38d72058b78207a1aa6e666bcfa1a094b68e04a7d933e98e1e01a",
-        "signature": "9898df8de632e1804746e52324c2eb9bd44fe7000924050daf1d20eabdd7d4a5",
+        "version": "fe23d48c24c0a58466cdb768abaa1163d73aaec3e75a21319e82c1030a958b3e",
+        "signature": "f86d2e97aa831be4c109c6db8aaddcb808e6cce6c2cb78a81f15e9f265219b98",
         "affectsGlobalScope": false
       },
       "./src/RTCDataChannel.ts": {
@@ -287,8 +287,13 @@
         "affectsGlobalScope": false
       },
       "./src/RTCIceCandidateEvent.ts": {
-        "version": "c716f1be24a1ec76c43418b35b9430a9316c804e77a615b8ad03d654eaa2e3b4",
-        "signature": "5461530e40a99639124b6c628723d860276a7d30ed927ac23e4167a78857b0cf",
+        "version": "2ba0c4ecadf12447f61ef5ebbcb0e87183db050ef113a3ac91e3437642a6bae7",
+        "signature": "1dde4dd61aee9fd1122595e8b29cc9250b056c0d446ad6d4cb32e2cbe9bef7e9",
+        "affectsGlobalScope": false
+      },
+      "./node_modules/event-target-shim/index.d.ts": {
+        "version": "63633f5796c4cf53210ce75f02e5d6e81b88012f5c8832af32c35d0a8b75cdde",
+        "signature": "63633f5796c4cf53210ce75f02e5d6e81b88012f5c8832af32c35d0a8b75cdde",
         "affectsGlobalScope": false
       },
       "./src/RTCSessionDescription.ts": {
@@ -297,18 +302,18 @@
         "affectsGlobalScope": false
       },
       "./src/RTCPeerConnection.ts": {
-        "version": "f89f590c58a6a60cd20a7c753c343614e9efb8b113b23ac7a2832eb9d689407d",
-        "signature": "111108bf298fdbb5a89e928208ef94cea8ddfcc9d1139a688d13476b5716d695",
+        "version": "0c82dd1b4575e1ba1fdcf16ef0bac54288a6cf402d0f7de5803cb2bbdd4c44e2",
+        "signature": "8608fa70b067034cbc9dd2a489460ae736f441d18010daf94b41a6b77ea7f8a2",
         "affectsGlobalScope": false
       },
       "./src/RTCView.ts": {
-        "version": "c334b22a532b1272e6d58ef90d82c7c26fa843c7792b0ac979960b014434d780",
-        "signature": "f4587a8bed7254ca0dd14cac880ead8effb0ca94fc840800268d3b0adf308fa8",
+        "version": "204c5b8292db0f23b1ddaebe3ff6bd62e06b4614ad9851f9f8890e60a8610bd5",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "348527c2837517fddb9f876d9ffe142e89e23b10a9da80bf0541d89f9ec68650",
-        "signature": "b77e2022bde7566f853f48bae70c970a666ae458999e90502e0307ebe9b68ed2",
+        "version": "a23fe7dc33c08c305fb9dbdba5d202ae6e9277d3b0d1e45698a41bfa3c17f89e",
+        "signature": "e01f504bf37f736b509d5d261243ed4bcce9f6d1e7e4615244aef17caa1c9922",
         "affectsGlobalScope": false
       },
       "./src/metro.config.macos.js": {
@@ -1534,6 +1539,12 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
+      "./node_modules/event-target-shim/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
       "./src/EventEmitter.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -1652,6 +1663,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "./node_modules/@types/react-native/index.d.ts",
+        "./node_modules/event-target-shim/index.d.ts",
         "./src/EventEmitter.ts",
         "./src/MediaStream.ts",
         "./src/MediaStreamEvent.ts",
@@ -1720,7 +1732,6 @@
         "./src/RTCIceCandidate.ts",
         "./src/RTCPeerConnection.ts",
         "./src/RTCSessionDescription.ts",
-        "./src/RTCView.ts",
         "./src/getDisplayMedia.ts",
         "./src/getUserMedia.ts"
       ],
@@ -2558,6 +2569,12 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
+      "./node_modules/event-target-shim/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
       "./src/EventEmitter.ts": [
         "./node_modules/@types/react-native/index.d.ts"
       ],
@@ -2583,14 +2600,12 @@
         "./src/RTCIceCandidate.ts"
       ],
       "./src/RTCPeerConnection.ts": [
+        "./node_modules/event-target-shim/index.d.ts",
         "./src/MediaStream.ts",
         "./src/MediaStreamTrack.ts",
         "./src/RTCDataChannel.ts",
         "./src/RTCIceCandidate.ts",
         "./src/RTCSessionDescription.ts"
-      ],
-      "./src/RTCView.ts": [
-        "./node_modules/@types/react-native/index.d.ts"
       ],
       "./src/getUserMedia.ts": [
         "./src/MediaStream.ts"
@@ -2604,7 +2619,6 @@
         "./src/RTCIceCandidate.ts",
         "./src/RTCPeerConnection.ts",
         "./src/RTCSessionDescription.ts",
-        "./src/RTCView.ts",
         "./src/getDisplayMedia.ts",
         "./src/getUserMedia.ts"
       ]
@@ -2724,6 +2738,7 @@
       "./node_modules/@types/yargs-parser/index.d.ts",
       "./node_modules/@types/yargs/index.d.ts",
       "./node_modules/csstype/index.d.ts",
+      "./node_modules/event-target-shim/index.d.ts",
       "./src/EventEmitter.ts",
       "./src/MediaDevices.ts",
       "./src/MediaStream.ts",

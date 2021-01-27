@@ -1,3 +1,4 @@
+import EventTarget from 'event-target-shim';
 import { MediaStream } from './MediaStream';
 import { MediaStreamTrack } from './MediaStreamTrack';
 import { RTCDataChannel } from './RTCDataChannel';
@@ -8,8 +9,7 @@ export declare type RTCIceGatheringState = 'new' | 'gathering' | 'complete';
 export declare type RTCPeerConnectionState = 'new' | 'connecting' | 'connected' | 'disconnected' | 'failed' | 'closed';
 export declare type RTCIceConnectionState = 'new' | 'checking' | 'connected' | 'completed' | 'failed' | 'disconnected' | 'closed';
 export declare const PEER_CONNECTION_EVENTS: string[];
-declare const RTCPeerConnection_base: any;
-export declare class RTCPeerConnection extends RTCPeerConnection_base {
+export declare class RTCPeerConnection extends EventTarget {
     localDescription?: RTCSessionDescription;
     remoteDescription?: RTCSessionDescription;
     signalingState: RTCSignalingState;
@@ -62,4 +62,3 @@ export declare class RTCPeerConnection extends RTCPeerConnection_base {
      */
     createDataChannel(label: string, dataChannelDict?: RTCDataChannelInit): RTCDataChannel;
 }
-export {};

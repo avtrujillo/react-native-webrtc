@@ -1,7 +1,8 @@
 'use strict';
-export class MediaStreamEvent {
+export class MediaStreamEvent extends Event {
     constructor(type, eventInitDict) {
-        this.type = type.toString();
-        Object.assign(this, eventInitDict);
+        super(type.toString(), eventInitDict);
+        // this.type = type.toString();
+        // Object.assign(this, eventInitDict);
     }
 }
