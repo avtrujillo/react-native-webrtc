@@ -10,7 +10,7 @@ export {
 
 export {RTCIceCandidate} from './RTCIceCandidate';
 export {RTCSessionDescription} from './RTCSessionDescription';
-export {RTCView} from './RTCView';
+// export {RTCView} from './RTCView';
 export {MediaStream} from './MediaStream';
 export {
 	MediaStreamTrack,
