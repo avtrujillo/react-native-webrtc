@@ -1,6 +1,6 @@
 'use strict';
 
-const EventTarget = require('event-target-shim');
+import EventTarget from 'event-target-shim';
 import { NativeModules, NativeEventEmitter } from 'react-native';
 
 import {MediaStream} from './MediaStream';
@@ -65,7 +65,7 @@ export const PEER_CONNECTION_EVENTS = [
 
 let nextPeerConnectionId = 0;
 
-export class RTCPeerConnection extends EventTarget(PEER_CONNECTION_EVENTS) {
+export class RTCPeerConnection extends EventTarget {//(PEER_CONNECTION_EVENTS) {
   localDescription?: RTCSessionDescription;
   remoteDescription?: RTCSessionDescription;
 

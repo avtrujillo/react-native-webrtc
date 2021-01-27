@@ -2,11 +2,11 @@
 
 import {RTCIceCandidate} from './RTCIceCandidate';
 
-export class RTCIceCandidateEvent {
-  type: string;
+export class RTCIceCandidateEvent extends Event {
+  // type: string;
   candidate?: RTCIceCandidate | null;
   constructor(type: any, eventInitDict: any) {
-    this.type = type.toString();
+    super(type.toString(), eventInitDict)
 
     this.candidate = null;
     if (eventInitDict && eventInitDict.candidate) {
