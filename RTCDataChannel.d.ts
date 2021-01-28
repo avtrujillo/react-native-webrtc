@@ -1,3 +1,4 @@
+import { EventTarget } from 'event-target-shim';
 export declare type RTCDataChannelInit = {
     ordered?: boolean;
     maxPacketLifeTime?: number;
@@ -9,8 +10,7 @@ export declare type RTCDataChannelInit = {
 };
 export declare type RTCDataChannelState = 'connecting' | 'open' | 'closing' | 'closed';
 export declare const DATA_CHANNEL_EVENTS: string[];
-declare const RTCDataChannel_base: any;
-export declare class RTCDataChannel extends RTCDataChannel_base {
+export declare class RTCDataChannel extends EventTarget {
     _peerConnectionId: number;
     binaryType: 'arraybuffer';
     bufferedAmount: number;
@@ -31,7 +31,4 @@ export declare class RTCDataChannel extends RTCDataChannel_base {
     constructor(peerConnectionId: number, label: string, dataChannelDict: RTCDataChannelInit);
     send(data: string | ArrayBuffer | ArrayBufferView): void;
     close(): void;
-    _unregisterEvents(): void;
-    _registerEvents(): void;
 }
-export {};

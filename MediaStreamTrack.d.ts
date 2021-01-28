@@ -1,6 +1,6 @@
+import { EventTarget } from 'event-target-shim';
 export declare type MediaStreamTrackState = "live" | "ended";
-declare const MediaStreamTrack_base: any;
-export declare class MediaStreamTrack extends MediaStreamTrack_base {
+export declare class MediaStreamTrack extends EventTarget {
     _constraints: Object;
     _enabled: boolean;
     id: string;
@@ -32,4 +32,3 @@ export declare class MediaStreamTrack extends MediaStreamTrack_base {
     getSettings(): void;
     release(): void;
 }
-export {};

@@ -75,7 +75,7 @@ export function getUserMedia(rawConstraints: any = {}): Promise<MediaStream> {
             }
             // const c = constraints[trackInfo.kind];
             if (typeof c === 'object') {
-              trackInfo.constraints = RTCUtil.deepClone(c);
+              trackInfo._constraints = RTCUtil.deepClone(c);
             }
           }
 

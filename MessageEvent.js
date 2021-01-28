@@ -1,7 +1,8 @@
 'use strict';
-export class MessageEvent {
+export class MessageEvent extends Event {
     constructor(type, eventInitDict) {
-        this.type = type.toString();
-        Object.assign(this, eventInitDict);
+        super(type, eventInitDict);
+        // this.type = type.toString();
+        // Object.assign(this, eventInitDict);
     }
 }

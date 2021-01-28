@@ -1,7 +1,7 @@
 'use strict';
 
 import {NativeModules} from 'react-native';
-const EventTarget = require('event-target-shim');
+import {EventTarget} from 'event-target-shim';
 import {MediaStreamErrorEvent} from './MediaStreamErrorEvent';
 import {MediaStreamError} from './MediaStreamError';
 import { deepClone } from './RTCUtil';
@@ -18,7 +18,7 @@ const MEDIA_STREAM_TRACK_EVENTS = [
 
 export type MediaStreamTrackState = "live" | "ended";
 
-export class MediaStreamTrack extends EventTarget(MEDIA_STREAM_TRACK_EVENTS) {
+export class MediaStreamTrack extends EventTarget {//(MEDIA_STREAM_TRACK_EVENTS) {
   _constraints: Object;
   _enabled: boolean;
   id: string;

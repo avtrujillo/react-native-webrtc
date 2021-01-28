@@ -1,11 +1,12 @@
 'use strict';
 
-export class MessageEvent {
-  type: string;
+export class MessageEvent extends Event {
+  // type: string;
   data?: string | ArrayBuffer | Blob;
   origin?: string;
   constructor(type: any, eventInitDict: any) {
-    this.type = type.toString();
-    Object.assign(this, eventInitDict);
+    super(type, eventInitDict)
+    // this.type = type.toString();
+    // Object.assign(this, eventInitDict);
   }
 }

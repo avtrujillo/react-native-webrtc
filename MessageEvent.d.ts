@@ -1,5 +1,4 @@
-export declare class MessageEvent {
-    type: string;
+export declare class MessageEvent extends Event {
     data?: string | ArrayBuffer | Blob;
     origin?: string;
     constructor(type: any, eventInitDict: any);

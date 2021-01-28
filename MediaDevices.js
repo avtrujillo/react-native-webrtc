@@ -1,13 +1,13 @@
 'use strict';
 import { NativeModules } from 'react-native';
-const EventTarget = require('event-target-shim');
+import { EventTarget } from 'event-target-shim';
 import { getDisplayMedia } from './getDisplayMedia';
 import { getUserMedia } from './getUserMedia';
 const { WebRTCModule } = NativeModules;
 const MEDIA_DEVICES_EVENTS = [
     'devicechange'
 ];
-export class MediaDevices extends EventTarget(MEDIA_DEVICES_EVENTS) {
+export class MediaDevices extends EventTarget {
     /**
      * W3C "Media Capture and Streams" compatible {@code enumerateDevices}
      * implementation.

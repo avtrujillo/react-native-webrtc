@@ -196,6 +196,11 @@
         "signature": "155e65d01666d64ab1ccba8e7401c39833db537324bcdfc9b600a3f2e7aae1b7",
         "affectsGlobalScope": false
       },
+      "./node_modules/event-target-shim/index.d.ts": {
+        "version": "63633f5796c4cf53210ce75f02e5d6e81b88012f5c8832af32c35d0a8b75cdde",
+        "signature": "63633f5796c4cf53210ce75f02e5d6e81b88012f5c8832af32c35d0a8b75cdde",
+        "affectsGlobalScope": false
+      },
       "./node_modules/@types/uuid/index.d.ts": {
         "version": "96b49a9de749afcf92b5bce1d8cc42cfae6816cdf5ea36584fd9256b8b2e5292",
         "signature": "96b49a9de749afcf92b5bce1d8cc42cfae6816cdf5ea36584fd9256b8b2e5292",
@@ -217,13 +222,13 @@
         "affectsGlobalScope": false
       },
       "./src/MediaStreamTrack.ts": {
-        "version": "7a53c0d744d471581212986402833a42068d448a6c389df179c86fee0b69976f",
-        "signature": "cf01ebd7f481b9c5db37cbe4d2a085d197e67bc0545c9e40154706950c5d09de",
+        "version": "92b38c6ddeaabab757e061f412218f7bd057f9fadb9ad8d648f2c43415599b5b",
+        "signature": "b77291087927eb2f30263310f128a66232ff00d5cf607ddabb7cbc68648cab44",
         "affectsGlobalScope": false
       },
       "./src/MediaStream.ts": {
-        "version": "b9a68d204c072b9f14420031302b3cfb965ba876c859fd98d4d391ee2216a07b",
-        "signature": "69fc3a57f27ccc73153e37882e72c22c20a71f5a8111b116e4df1c0bbf5650bf",
+        "version": "94124ad7388401e8fc59dad84a477138ca6c43146054c3a14fdb36c83344e414",
+        "signature": "0b24b500866e72540df07c9576b7f55de2e90190b5212f9235ac1a1fdbfde406",
         "affectsGlobalScope": false
       },
       "./src/getDisplayMedia.ts": {
@@ -237,13 +242,13 @@
         "affectsGlobalScope": false
       },
       "./src/getUserMedia.ts": {
-        "version": "4874b8531709ca9afb8dd8f0c35baa4890a1f7227f64563624f963947c264e87",
+        "version": "bde400bf13b328560bb2126d6e5a0aa6ff186a67f63ec74485026056061af7cf",
         "signature": "b32a746089039c98df320b0bd91e62972b62fa40f124f20116f740054173930e",
         "affectsGlobalScope": false
       },
       "./src/MediaDevices.ts": {
-        "version": "8dcf830cc762f410434eed1d1ce1e8ce06ee7342087273865b369faa8566e028",
-        "signature": "c3ce40e38be2ceb1da17669055ce4823c094fddf3aaa4f726a8d042dcaade23f",
+        "version": "e50b83f9ce0928fdf66c54cc559b78c11f37c34c3479dcc5d3884f92027324f0",
+        "signature": "66df243b0b390bab374308cc7d8bdccd895157561481ec6725b66bcd37286d58",
         "affectsGlobalScope": false
       },
       "./src/MediaStreamEvent.ts": {
@@ -252,13 +257,13 @@
         "affectsGlobalScope": false
       },
       "./src/MediaStreamTrackEvent.ts": {
-        "version": "91a4ce7b2e5b15f56d70050938a8f72b72cf86bb1cafe81979d564bbf2df6f2f",
-        "signature": "19d368fca8cf4f5102f40146f5632533925d9e57dc928dd55d10538b5de01d0f",
+        "version": "d815291d5f4b0139e5a39606467d6b8f5415a09e51648576bd17e64285d71041",
+        "signature": "5cc165c1b922f84af24fe631af872a0f1fced36f0e4f420c90ffb5b21a7e12a8",
         "affectsGlobalScope": false
       },
       "./src/MessageEvent.ts": {
-        "version": "9c425f126306c30e4cde1fbdac8bf0d2d4575dc250cab0b7aae12b285c12683c",
-        "signature": "c87dc549119e47065d31d3dcaf3cb0def5b4b7d5db4c8bc80c4930e38a5eaddc",
+        "version": "98463d0042f65d6b20135ac0fd2ecda3d28c4a63ed47e8d4a19833930f0d5c73",
+        "signature": "e3a89465b3290a1471dc9a86e3c714c67e89c795dbe13b06e2e546334febb517",
         "affectsGlobalScope": false
       },
       "./node_modules/@types/base64-js/index.d.ts": {
@@ -272,8 +277,8 @@
         "affectsGlobalScope": false
       },
       "./src/RTCDataChannel.ts": {
-        "version": "48df2274ef57202d361b0283f9fa0082c1388d6f2223209aa7fe74b7e1f29b51",
-        "signature": "d4ccb5dbf0b65c9d741e0249b55560a1ab3450aafbd55846f00e62a5f4b02f89",
+        "version": "ce8b938ddc1a7ba6698b50f3395897f524fb3784d582ed7f9934bc0f3802b254",
+        "signature": "5d78d89bd2de7cb05d6de6a96e0e8d9e9f0edd51bfe36603042d7f4fe2459fb5",
         "affectsGlobalScope": false
       },
       "./src/RTCEvent.ts": {
@@ -291,19 +296,14 @@
         "signature": "1dde4dd61aee9fd1122595e8b29cc9250b056c0d446ad6d4cb32e2cbe9bef7e9",
         "affectsGlobalScope": false
       },
-      "./node_modules/event-target-shim/index.d.ts": {
-        "version": "63633f5796c4cf53210ce75f02e5d6e81b88012f5c8832af32c35d0a8b75cdde",
-        "signature": "63633f5796c4cf53210ce75f02e5d6e81b88012f5c8832af32c35d0a8b75cdde",
-        "affectsGlobalScope": false
-      },
       "./src/RTCSessionDescription.ts": {
         "version": "103e221dde71af51de00377943c710c88314430cd87fe7e57a97f177035f00f6",
         "signature": "2d96e92a88c7afea9434e7e3b75679482fe4db0ec90a78442c7713de5d083dbc",
         "affectsGlobalScope": false
       },
       "./src/RTCPeerConnection.ts": {
-        "version": "0c82dd1b4575e1ba1fdcf16ef0bac54288a6cf402d0f7de5803cb2bbdd4c44e2",
-        "signature": "8608fa70b067034cbc9dd2a489460ae736f441d18010daf94b41a6b77ea7f8a2",
+        "version": "051f7ef2b18dbe82b8d49fc047ace869d71ff2866b976c260dcb961ffa0f656c",
+        "signature": "2f24478b5cb587515a7bbba0f598a42618ffd67c8e3417cb6e6b5afdb9c1cc99",
         "affectsGlobalScope": false
       },
       "./src/RTCView.ts": {
@@ -1558,6 +1558,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "./node_modules/@types/react-native/index.d.ts",
+        "./node_modules/event-target-shim/index.d.ts",
         "./src/getDisplayMedia.ts",
         "./src/getUserMedia.ts"
       ],
@@ -1568,6 +1569,7 @@
         "../../../node_modules/@types/node/util.d.ts",
         "./node_modules/@types/react-native/index.d.ts",
         "./node_modules/@types/uuid/index.d.ts",
+        "./node_modules/event-target-shim/index.d.ts",
         "./src/MediaStreamTrack.ts"
       ],
       "./src/MediaStreamError.ts": [
@@ -1596,6 +1598,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "./node_modules/@types/react-native/index.d.ts",
+        "./node_modules/event-target-shim/index.d.ts",
         "./src/MediaStreamError.ts",
         "./src/MediaStreamErrorEvent.ts",
         "./src/RTCUtil.ts"
@@ -1627,6 +1630,7 @@
         "../../../node_modules/@types/node/util.d.ts",
         "./node_modules/@types/base64-js/index.d.ts",
         "./node_modules/@types/react-native/index.d.ts",
+        "./node_modules/event-target-shim/index.d.ts",
         "./src/EventEmitter.ts",
         "./src/MessageEvent.ts",
         "./src/RTCDataChannelEvent.ts"
@@ -2579,9 +2583,11 @@
         "./node_modules/@types/react-native/index.d.ts"
       ],
       "./src/MediaDevices.ts": [
+        "./node_modules/event-target-shim/index.d.ts",
         "./src/MediaStream.ts"
       ],
       "./src/MediaStream.ts": [
+        "./node_modules/event-target-shim/index.d.ts",
         "./src/MediaStreamTrack.ts"
       ],
       "./src/MediaStreamErrorEvent.ts": [
@@ -2590,8 +2596,14 @@
       "./src/MediaStreamEvent.ts": [
         "./src/MediaStream.ts"
       ],
+      "./src/MediaStreamTrack.ts": [
+        "./node_modules/event-target-shim/index.d.ts"
+      ],
       "./src/MediaStreamTrackEvent.ts": [
         "./src/MediaStreamTrack.ts"
+      ],
+      "./src/RTCDataChannel.ts": [
+        "./node_modules/event-target-shim/index.d.ts"
       ],
       "./src/RTCDataChannelEvent.ts": [
         "./src/RTCDataChannel.ts"

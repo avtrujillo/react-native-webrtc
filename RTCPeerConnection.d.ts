@@ -1,4 +1,4 @@
-import EventTarget from 'event-target-shim';
+import { EventTarget } from 'event-target-shim';
 import { MediaStream } from './MediaStream';
 import { MediaStreamTrack } from './MediaStreamTrack';
 import { RTCDataChannel } from './RTCDataChannel';

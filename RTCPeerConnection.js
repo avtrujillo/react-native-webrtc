@@ -1,5 +1,5 @@
 'use strict';
-import EventTarget from 'event-target-shim';
+import { EventTarget } from 'event-target-shim';
 import { NativeModules } from 'react-native';
 import { MediaStream } from './MediaStream';
 import { MediaStreamEvent } from './MediaStreamEvent';

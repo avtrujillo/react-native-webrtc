@@ -2,11 +2,12 @@
 
 import {MediaStreamTrack} from './MediaStreamTrack';
 
-export class MediaStreamTrackEvent {
-  type: string;
+export class MediaStreamTrackEvent extends Event {
+  // type: string;
   track?: MediaStreamTrack;
   constructor(type: any, eventInitDict: any) {
-    this.type = type.toString();
-    Object.assign(this, eventInitDict);
+    super(type, eventInitDict)
+    // this.type = type.toString();
+    // Object.assign(this, eventInitDict);
   }
 }

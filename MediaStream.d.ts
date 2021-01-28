@@ -1,7 +1,7 @@
+import { EventTarget } from 'event-target-shim';
 import { MediaStreamTrack } from './MediaStreamTrack';
 export declare const MEDIA_STREAM_EVENTS: string[];
-declare const MediaStream_base: any;
-export declare class MediaStream extends MediaStream_base {
+export declare class MediaStream extends EventTarget {
     id: string;
     active: boolean;
     onactive?: Function;
@@ -40,4 +40,3 @@ export declare class MediaStream extends MediaStream_base {
     toURL(): string;
     release(releaseTracks?: boolean): void;
 }
-export {};

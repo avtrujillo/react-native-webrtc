@@ -1,7 +1,7 @@
 'use strict';
 
 import {NativeModules} from 'react-native';
-const EventTarget = require('event-target-shim');
+import {EventTarget} from 'event-target-shim';
 
 import {getDisplayMedia} from './getDisplayMedia';
 import {getUserMedia} from './getUserMedia';
@@ -12,7 +12,7 @@ const MEDIA_DEVICES_EVENTS = [
     'devicechange'
 ];
 
-export class MediaDevices extends EventTarget(MEDIA_DEVICES_EVENTS) {
+export class MediaDevices extends EventTarget { //(MEDIA_DEVICES_EVENTS) {
     // TODO: implement.
     // @ts-ignore
     ondevicechange: ?Function;

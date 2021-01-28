@@ -1,6 +1,6 @@
 'use strict';
 import { NativeModules } from 'react-native';
-const EventTarget = require('event-target-shim');
+import { EventTarget } from 'event-target-shim';
 import uuid from 'uuid';
 import { MediaStreamTrack } from './MediaStreamTrack';
 const { WebRTCModule } = NativeModules;
@@ -10,7 +10,7 @@ export const MEDIA_STREAM_EVENTS = [
     'addtrack',
     'removetrack',
 ];
-export class MediaStream extends EventTarget(MEDIA_STREAM_EVENTS) {
+export class MediaStream extends EventTarget {
     /**
      * A MediaStream can be constructed in several ways, depending on the paramters
      * that are passed here.

@@ -2,7 +2,7 @@
 
 import { NativeModules } from 'react-native';
 import base64 from 'base64-js';
-const EventTarget = require('event-target-shim');
+import {EventTarget} from 'event-target-shim';
 import {MessageEvent} from './MessageEvent';
 import {RTCDataChannelEvent} from './RTCDataChannelEvent';
 import {EventEmitter} from './EventEmitter';
@@ -36,7 +36,7 @@ export const DATA_CHANNEL_EVENTS = [
 
 class ResourceInUse extends Error {}
 
-export class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
+export class RTCDataChannel extends EventTarget { //(DATA_CHANNEL_EVENTS) {
 
   _peerConnectionId: number;
 
@@ -82,7 +82,7 @@ export class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
     this.protocol = dataChannelDict.protocol || '';
     this.negotiated = !!dataChannelDict.negotiated;
 
-    this._registerEvents();
+    //this._registerEvents(); // TODO
   }
 
   send(data: string | ArrayBuffer | ArrayBufferView) {
@@ -112,38 +112,38 @@ export class RTCDataChannel extends EventTarget(DATA_CHANNEL_EVENTS) {
     WebRTCModule.dataChannelClose(this._peerConnectionId, this.id);
   }
 
-  _unregisterEvents() {
-    this._subscriptions.forEach((e: any) => e.remove());
-    this._subscriptions = [];
-  }
+  // _unregisterEvents() {
+  //   this._subscriptions.forEach((e: any) => e.remove());
+  //   this._subscriptions = [];
+  // }
 
-  _registerEvents() {
-    this._subscriptions = [
-      EventEmitter.addListener('dataChannelStateChanged', ev => {
-        if (ev.peerConnectionId !== this._peerConnectionId
-            || ev.id !== this.id) {
-          return;
-        }
-        this.readyState = ev.state;
-        if (this.readyState === 'open') {
-          this.dispatchEvent(new RTCDataChannelEvent('open', {channel: this}));
-        } else if (this.readyState === 'closed') {
-          this.dispatchEvent(new RTCDataChannelEvent('close', {channel: this}));
-          this._unregisterEvents();
-        }
-      }),
-      EventEmitter.addListener('dataChannelReceiveMessage', ev => {
-        if (ev.peerConnectionId !== this._peerConnectionId
-            || ev.id !== this.id) {
-          return;
-        }
-        let data = ev.data;
-        if (ev.type === 'binary') {
-          data = base64.toByteArray(ev.data).buffer;
-        }
-        this.dispatchEvent(new MessageEvent('message', {data}));
-      }),
-    ];
-  }
+  // _registerEvents() {
+  //   this._subscriptions = [
+  //     EventEmitter.addListener('dataChannelStateChanged', ev => {
+  //       if (ev.peerConnectionId !== this._peerConnectionId
+  //           || ev.id !== this.id) {
+  //         return;
+  //       }
+  //       this.readyState = ev.state;
+  //       if (this.readyState === 'open') {
+  //         this.dispatchEvent(new RTCDataChannelEvent('open', {channel: this}));
+  //       } else if (this.readyState === 'closed') {
+  //         this.dispatchEvent(new RTCDataChannelEvent('close', {channel: this}));
+  //         this._unregisterEvents();
+  //       }
+  //     }),
+  //     EventEmitter.addListener('dataChannelReceiveMessage', ev => {
+  //       if (ev.peerConnectionId !== this._peerConnectionId
+  //           || ev.id !== this.id) {
+  //         return;
+  //       }
+  //       let data = ev.data;
+  //       if (ev.type === 'binary') {
+  //         data = base64.toByteArray(ev.data).buffer;
+  //       }
+  //       this.dispatchEvent(new MessageEvent('message', {data}));
+  //     }),
+  //   ];
+  // }
 
 }

@@ -62,7 +62,7 @@ export function getUserMedia(rawConstraints = {}) {
                     }
                     // const c = constraints[trackInfo.kind];
                     if (typeof c === 'object') {
-                        trackInfo.constraints = RTCUtil.deepClone(c);
+                        trackInfo._constraints = RTCUtil.deepClone(c);
                     }
                 }
                 const info = {

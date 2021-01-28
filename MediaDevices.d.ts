@@ -1,5 +1,5 @@
-declare const MediaDevices_base: any;
-export declare class MediaDevices extends MediaDevices_base {
+import { EventTarget } from 'event-target-shim';
+export declare class MediaDevices extends EventTarget {
     ondevicechange: ?Function;
     /**
      * W3C "Media Capture and Streams" compatible {@code enumerateDevices}
@@ -24,4 +24,3 @@ export declare class MediaDevices extends MediaDevices_base {
      */
     getUserMedia(constraints: any): Promise<import("./MediaStream").MediaStream>;
 }
-export {};
