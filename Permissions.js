@@ -1,11 +1,13 @@
 'use strict';
-import { NativeModules, PermissionsAndroid, Platform } from 'react-native';
-const { WebRTCModule } = NativeModules;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.permissions = exports.Permissions = void 0;
+const react_native_1 = require("react-native");
+const { WebRTCModule } = react_native_1.NativeModules;
 /**
  * Class implementing a subset of W3C's Permissions API as defined by:
  * https://www.w3.org/TR/permissions/
  */
-export class Permissions {
+class Permissions {
     constructor() {
         /**
          * Possible result values for {@link query}, in accordance with:
@@ -35,9 +37,9 @@ export class Permissions {
      */
     _requestPermissionAndroid(perm) {
         return new Promise((resolve, reject) => {
-            PermissionsAndroid.request(perm).then(
+            react_native_1.PermissionsAndroid.request(perm).then(
             // @ts-ignore
-            granted => resolve(granted === true || granted === PermissionsAndroid.RESULTS.GRANTED), () => resolve(false));
+            granted => resolve(granted === true || granted === react_native_1.PermissionsAndroid.RESULTS.GRANTED), () => resolve(false));
         });
     }
     /**
@@ -65,15 +67,15 @@ export class Permissions {
         catch (e) {
             return Promise.reject(e);
         }
-        if (Platform.OS === 'android') {
+        if (react_native_1.Platform.OS === 'android') {
             const perm = permissionDesc.name === 'camera'
-                ? PermissionsAndroid.PERMISSIONS.CAMERA
-                : PermissionsAndroid.PERMISSIONS.RECORD_AUDIO;
+                ? react_native_1.PermissionsAndroid.PERMISSIONS.CAMERA
+                : react_native_1.PermissionsAndroid.PERMISSIONS.RECORD_AUDIO;
             return new Promise((resolve, reject) => {
-                PermissionsAndroid.check(perm).then(granted => resolve(granted ? this.RESULT.GRANTED : this.RESULT.PROMPT), () => resolve(this.RESULT.PROMPT));
+                react_native_1.PermissionsAndroid.check(perm).then(granted => resolve(granted ? this.RESULT.GRANTED : this.RESULT.PROMPT), () => resolve(this.RESULT.PROMPT));
             });
         }
-        else if (Platform.OS === 'ios' || Platform.OS === 'macos') {
+        else if (react_native_1.Platform.OS === 'ios' || react_native_1.Platform.OS === 'macos') {
             return WebRTCModule.checkPermission(permissionDesc.name);
         }
         else {
@@ -91,17 +93,17 @@ export class Permissions {
         catch (e) {
             return Promise.reject(e);
         }
-        if (Platform.OS === 'android') {
+        if (react_native_1.Platform.OS === 'android') {
             const perm = permissionDesc.name === 'camera'
-                ? PermissionsAndroid.PERMISSIONS.CAMERA
-                : PermissionsAndroid.PERMISSIONS.RECORD_AUDIO;
+                ? react_native_1.PermissionsAndroid.PERMISSIONS.CAMERA
+                : react_native_1.PermissionsAndroid.PERMISSIONS.RECORD_AUDIO;
             const requestPermission = () => this._requestPermissionAndroid(perm);
             // @ts-ignore
             this._lastReq
                 = this._lastReq.then(requestPermission, requestPermission);
             return this._lastReq;
         }
-        else if (Platform.OS === 'ios' || Platform.OS === 'macos') {
+        else if (react_native_1.Platform.OS === 'ios' || react_native_1.Platform.OS === 'macos') {
             return WebRTCModule.requestPermission(permissionDesc.name);
         }
         else {
@@ -109,4 +111,5 @@ export class Permissions {
         }
     }
 }
-export const permissions = new Permissions();
+exports.Permissions = Permissions;
+exports.permissions = new Permissions();

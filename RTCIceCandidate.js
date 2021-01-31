@@ -1,5 +1,7 @@
 'use strict';
-export class RTCIceCandidate {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RTCIceCandidate = void 0;
+class RTCIceCandidate {
     constructor(info) {
         this.candidate = info.candidate;
         this.sdpMLineIndex = info.sdpMLineIndex;
@@ -13,3 +15,4 @@ export class RTCIceCandidate {
         };
     }
 }
+exports.RTCIceCandidate = RTCIceCandidate;

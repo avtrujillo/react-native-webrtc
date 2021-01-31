@@ -1,10 +1,12 @@
 'use strict';
-import { Platform, NativeModules } from 'react-native';
-import { MediaStream } from './MediaStream';
-import { MediaStreamError } from './MediaStreamError';
-const { WebRTCModule } = NativeModules;
-export function getDisplayMedia(constraints) {
-    if (Platform.OS !== 'android') {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDisplayMedia = void 0;
+const react_native_1 = require("react-native");
+const MediaStream_1 = require("./MediaStream");
+const MediaStreamError_1 = require("./MediaStreamError");
+const { WebRTCModule } = react_native_1.NativeModules;
+function getDisplayMedia(constraints) {
+    if (react_native_1.Platform.OS !== 'android') {
         return Promise.reject(new Error('Unsupported platform'));
     }
     if (!constraints || !constraints.video) {
@@ -19,10 +21,11 @@ export function getDisplayMedia(constraints) {
                 streamReactTag: streamId,
                 tracks: [track]
             };
-            const stream = new MediaStream(info);
+            const stream = new MediaStream_1.MediaStream(info);
             resolve(stream);
         }, (error) => {
-            reject(new MediaStreamError(error));
+            reject(new MediaStreamError_1.MediaStreamError(error));
         });
     });
 }
+exports.getDisplayMedia = getDisplayMedia;

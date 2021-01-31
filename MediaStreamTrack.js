@@ -1,8 +1,10 @@
 'use strict';
-import { NativeModules } from 'react-native';
-import { EventTarget } from 'event-target-shim';
-import { deepClone } from './RTCUtil';
-const { WebRTCModule } = NativeModules;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaStreamTrack = void 0;
+const react_native_1 = require("react-native");
+const event_target_shim_1 = require("event-target-shim");
+const RTCUtil_1 = require("./RTCUtil");
+const { WebRTCModule } = react_native_1.NativeModules;
 const MEDIA_STREAM_TRACK_EVENTS = [
     'ended',
     'mute',
@@ -10,7 +12,7 @@ const MEDIA_STREAM_TRACK_EVENTS = [
     // see: https://www.w3.org/TR/mediacapture-streams/#constrainable-interface
     'overconstrained',
 ];
-export class MediaStreamTrack extends EventTarget {
+class MediaStreamTrack extends event_target_shim_1.EventTarget {
     constructor(info) {
         super();
         this._constraints = info.constraints || {};
@@ -66,7 +68,7 @@ export class MediaStreamTrack extends EventTarget {
         throw new Error('Not implemented.');
     }
     getConstraints() {
-        return deepClone(this._constraints);
+        return RTCUtil_1.deepClone(this._constraints);
     }
     getSettings() {
         throw new Error('Not implemented.');
@@ -75,3 +77,4 @@ export class MediaStreamTrack extends EventTarget {
         WebRTCModule.mediaStreamTrackRelease(this.id);
     }
 }
+exports.MediaStreamTrack = MediaStreamTrack;

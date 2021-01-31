@@ -1,8 +1,12 @@
 'use strict';
-import { NativeModules, } from 'react-native';
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_native_1 = require("react-native");
 // import requireNativeComponent from 'requireNativeComponent';
-import PropTypes from 'prop-types';
-const { WebRTCModule } = NativeModules;
+const prop_types_1 = __importDefault(require("prop-types"));
+const { WebRTCModule } = react_native_1.NativeModules;
 const RTCVideoView = {
     name: 'RTCVideoView',
     propTypes: {
@@ -11,15 +15,15 @@ const RTCVideoView = {
          * mirrored during rendering. Commonly, applications choose to mirror the
          * user-facing camera.
          */
-        mirror: PropTypes.bool,
+        mirror: prop_types_1.default.bool,
         /**
          * In the fashion of
          * https://www.w3.org/TR/html5/embedded-content-0.html#dom-video-videowidth
          * and https://www.w3.org/TR/html5/rendering.html#video-object-fit,
          * resembles the CSS style object-fit.
          */
-        objectFit: PropTypes.oneOf(['contain', 'cover']),
-        streamURL: PropTypes.string,
+        objectFit: prop_types_1.default.oneOf(['contain', 'cover']),
+        streamURL: prop_types_1.default.string,
         /**
          * Similarly to the CSS property z-index, specifies the z-order of this
          * RTCView in the stacking space of all RTCViews. When RTCViews overlap,
@@ -43,6 +47,6 @@ const RTCVideoView = {
          * remote video(s) which appear in the background, and 1 for the local
          * video(s) which appear above the remote video(s).
          */
-        zOrder: PropTypes.number
+        zOrder: prop_types_1.default.number
     },
 };

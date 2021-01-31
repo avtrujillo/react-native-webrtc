@@ -1,5 +1,7 @@
 'use strict';
-export class RTCIceCandidateEvent extends Event {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RTCIceCandidateEvent = void 0;
+class RTCIceCandidateEvent extends Event {
     constructor(type, eventInitDict) {
         super(type.toString(), eventInitDict);
         this.candidate = null;
@@ -8,3 +10,4 @@ export class RTCIceCandidateEvent extends Event {
         }
     }
 }
+exports.RTCIceCandidateEvent = RTCIceCandidateEvent;

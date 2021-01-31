@@ -1,16 +1,21 @@
 'use strict';
-import { NativeModules } from 'react-native';
-import { EventTarget } from 'event-target-shim';
-import uuid from 'uuid';
-import { MediaStreamTrack } from './MediaStreamTrack';
-const { WebRTCModule } = NativeModules;
-export const MEDIA_STREAM_EVENTS = [
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaStream = exports.MEDIA_STREAM_EVENTS = void 0;
+const react_native_1 = require("react-native");
+const event_target_shim_1 = require("event-target-shim");
+const uuid_1 = __importDefault(require("uuid"));
+const MediaStreamTrack_1 = require("./MediaStreamTrack");
+const { WebRTCModule } = react_native_1.NativeModules;
+exports.MEDIA_STREAM_EVENTS = [
     'active',
     'inactive',
     'addtrack',
     'removetrack',
 ];
-export class MediaStream extends EventTarget {
+class MediaStream extends event_target_shim_1.EventTarget {
     /**
      * A MediaStream can be constructed in several ways, depending on the paramters
      * that are passed here.
@@ -27,7 +32,7 @@ export class MediaStream extends EventTarget {
         this.active = true;
         this._tracks = [];
         // Assigm a UUID to start with. It may get overridden for remote streams.
-        this.id = uuid.v4();
+        this.id = uuid_1.default.v4();
         // Local MediaStreams are created by WebRTCModule to have their id and
         // reactTag equal because WebRTCModule follows the respective standard's
         // recommendation for id generation i.e. uses UUID which is unique enough
@@ -54,7 +59,7 @@ export class MediaStream extends EventTarget {
             for (const trackInfo of arg.tracks) {
                 // We are not using addTrack here because the track is already part of the
                 // stream, so there is no need to add it on the native side.
-                this._tracks.push(new MediaStreamTrack(trackInfo));
+                this._tracks.push(new MediaStreamTrack_1.MediaStreamTrack(trackInfo));
             }
         }
         else {
@@ -105,3 +110,4 @@ export class MediaStream extends EventTarget {
         WebRTCModule.mediaStreamRelease(this._reactTag);
     }
 }
+exports.MediaStream = MediaStream;

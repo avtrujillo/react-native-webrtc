@@ -1,9 +1,14 @@
 'use strict';
-import { NativeModules } from 'react-native';
-import base64 from 'base64-js';
-import { EventTarget } from 'event-target-shim';
-const { WebRTCModule } = NativeModules;
-export const DATA_CHANNEL_EVENTS = [
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RTCDataChannel = exports.DATA_CHANNEL_EVENTS = void 0;
+const react_native_1 = require("react-native");
+const base64_js_1 = __importDefault(require("base64-js"));
+const event_target_shim_1 = require("event-target-shim");
+const { WebRTCModule } = react_native_1.NativeModules;
+exports.DATA_CHANNEL_EVENTS = [
     'open',
     'message',
     'bufferedamountlow',
@@ -12,7 +17,7 @@ export const DATA_CHANNEL_EVENTS = [
 ];
 class ResourceInUse extends Error {
 }
-export class RTCDataChannel extends EventTarget {
+class RTCDataChannel extends event_target_shim_1.EventTarget {
     constructor(peerConnectionId, label, dataChannelDict) {
         super();
         this.binaryType = 'arraybuffer'; // we only support 'arraybuffer'
@@ -57,7 +62,7 @@ export class RTCDataChannel extends EventTarget {
         else {
             throw new TypeError('Data must be either string, ArrayBuffer, or ArrayBufferView');
         }
-        WebRTCModule.dataChannelSend(this._peerConnectionId, this.id, base64.fromByteArray(uint8data), 'binary');
+        WebRTCModule.dataChannelSend(this._peerConnectionId, this.id, base64_js_1.default.fromByteArray(uint8data), 'binary');
     }
     close() {
         if (this.readyState === 'closing' || this.readyState === 'closed') {
@@ -67,3 +72,4 @@ export class RTCDataChannel extends EventTarget {
         WebRTCModule.dataChannelClose(this._peerConnectionId, this.id);
     }
 }
+exports.RTCDataChannel = RTCDataChannel;

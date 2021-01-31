@@ -1,4 +1,6 @@
 'use strict';
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.normalizeConstraints = exports.normalizeOfferAnswerOptions = exports.deepClone = void 0;
 const DEFAULT_AUDIO_CONSTRAINTS = {};
 const DEFAULT_VIDEO_CONSTRAINTS = {
     facingMode: 'user',
@@ -108,16 +110,17 @@ function normalizeMediaConstraints(constraints, mediaType) {
  * @param {Object} obj - object to be cloned
  * @return {Object} cloned obj
  */
-export function deepClone(obj) {
+function deepClone(obj) {
     return JSON.parse(JSON.stringify(obj));
 }
+exports.deepClone = deepClone;
 /**
  * Normalize options passed to createOffer() / createAnswer().
  *
  * @param {Object} options - user supplied options
  * @return {Object} newOptions - normalized options
  */
-export function normalizeOfferAnswerOptions(options = {}) {
+function normalizeOfferAnswerOptions(options = {}) {
     const newOptions = {};
     if (!options) {
         return newOptions;
@@ -137,10 +140,11 @@ export function normalizeOfferAnswerOptions(options = {}) {
     }
     return newOptions;
 }
+exports.normalizeOfferAnswerOptions = normalizeOfferAnswerOptions;
 /**
  * Normalize the given constraints in something we can work with.
  */
-export function normalizeConstraints(constraints) {
+function normalizeConstraints(constraints) {
     const c = deepClone(constraints);
     for (const mediaType of ['audio', 'video']) {
         const mediaTypeConstraints = c[mediaType];
@@ -161,3 +165,4 @@ export function normalizeConstraints(constraints) {
     }
     return c;
 }
+exports.normalizeConstraints = normalizeConstraints;

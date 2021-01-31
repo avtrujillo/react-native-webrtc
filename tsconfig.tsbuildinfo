@@ -700,7 +700,7 @@
     "options": {
       "declaration": true,
       "target": 99,
-      "module": 99,
+      "module": 1,
       "lib": [
         "lib.es2015.d.ts",
         "lib.dom.d.ts"

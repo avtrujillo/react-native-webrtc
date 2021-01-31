@@ -1,11 +1,32 @@
 'use strict';
-import { NativeModules } from 'react-native';
-import * as RTCUtil from './RTCUtil';
-import { MediaStream } from './MediaStream';
-import { MediaStreamError } from './MediaStreamError';
-import { permissions } from './Permissions';
-const { WebRTCModule } = NativeModules;
-export function getUserMedia(rawConstraints = {}) {
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getUserMedia = void 0;
+const react_native_1 = require("react-native");
+const RTCUtil = __importStar(require("./RTCUtil"));
+const MediaStream_1 = require("./MediaStream");
+const MediaStreamError_1 = require("./MediaStreamError");
+const Permissions_1 = require("./Permissions");
+const { WebRTCModule } = react_native_1.NativeModules;
+function getUserMedia(rawConstraints = {}) {
     // According to
     // https://www.w3.org/TR/mediacapture-streams/#dom-mediadevices-getusermedia,
     // the constraints argument is a dictionary of type MediaStreamConstraints.
@@ -21,13 +42,13 @@ export function getUserMedia(rawConstraints = {}) {
     // Request required permissions
     const reqPermissions = [];
     if (constraints.audio) {
-        reqPermissions.push(permissions.request({ name: 'microphone' }));
+        reqPermissions.push(Permissions_1.permissions.request({ name: 'microphone' }));
     }
     else {
         reqPermissions.push(Promise.resolve(false));
     }
     if (constraints.video) {
-        reqPermissions.push(permissions.request({ name: 'camera' }));
+        reqPermissions.push(Permissions_1.permissions.request({ name: 'camera' }));
     }
     else {
         reqPermissions.push(Promise.resolve(false));
@@ -43,7 +64,7 @@ export function getUserMedia(rawConstraints = {}) {
                     message: 'Permission denied.',
                     name: 'SecurityError'
                 };
-                reject(new MediaStreamError(error));
+                reject(new MediaStreamError_1.MediaStreamError(error));
                 return;
             }
             audioPerm || (delete constraints.audio);
@@ -70,7 +91,7 @@ export function getUserMedia(rawConstraints = {}) {
                     streamReactTag: id,
                     tracks
                 };
-                resolve(new MediaStream(info));
+                resolve(new MediaStream_1.MediaStream(info));
             };
             const failure = (type, message) => {
                 let error;
@@ -80,7 +101,7 @@ export function getUserMedia(rawConstraints = {}) {
                         break;
                 }
                 if (!error) {
-                    error = new MediaStreamError({ message, name: type });
+                    error = new MediaStreamError_1.MediaStreamError({ message, name: type });
                 }
                 reject(error);
             };
@@ -88,3 +109,4 @@ export function getUserMedia(rawConstraints = {}) {
         });
     });
 }
+exports.getUserMedia = getUserMedia;
