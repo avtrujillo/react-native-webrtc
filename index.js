@@ -1,13 +1,14 @@
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.registerGlobals = exports.Permissions = exports.permissions = exports.MediaDevices = exports.RTCDataChannel = exports.getDisplayMedia = exports.getUserMedia = exports.MediaStreamTrack = exports.MediaStream = exports.RTCSessionDescription = exports.RTCIceCandidate = exports.RTCPeerConnection = void 0;
+exports.registerGlobals = exports.Permissions = exports.permissions = exports.MediaDevices = exports.RTCDataChannel = exports.getDisplayMedia = exports.getUserMedia = exports.MediaStreamTrack = exports.MediaStream = exports.RTCView = exports.RTCSessionDescription = exports.RTCIceCandidate = exports.RTCPeerConnection = void 0;
 var RTCPeerConnection_1 = require("./RTCPeerConnection");
 Object.defineProperty(exports, "RTCPeerConnection", { enumerable: true, get: function () { return RTCPeerConnection_1.RTCPeerConnection; } });
 var RTCIceCandidate_1 = require("./RTCIceCandidate");
 Object.defineProperty(exports, "RTCIceCandidate", { enumerable: true, get: function () { return RTCIceCandidate_1.RTCIceCandidate; } });
 var RTCSessionDescription_1 = require("./RTCSessionDescription");
 Object.defineProperty(exports, "RTCSessionDescription", { enumerable: true, get: function () { return RTCSessionDescription_1.RTCSessionDescription; } });
-// export {RTCView} from './RTCView';
+var RTCView_1 = require("./RTCView");
+Object.defineProperty(exports, "RTCView", { enumerable: true, get: function () { return RTCView_1.RTCView; } });
 var MediaStream_1 = require("./MediaStream");
 Object.defineProperty(exports, "MediaStream", { enumerable: true, get: function () { return MediaStream_1.MediaStream; } });
 var MediaStreamTrack_1 = require("./MediaStreamTrack");

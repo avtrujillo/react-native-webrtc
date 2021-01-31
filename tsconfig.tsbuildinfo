@@ -307,13 +307,13 @@
         "affectsGlobalScope": false
       },
       "./src/RTCView.ts": {
-        "version": "204c5b8292db0f23b1ddaebe3ff6bd62e06b4614ad9851f9f8890e60a8610bd5",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "version": "18a0a55e693c6e6332adfe83c00e518ed44b25e951cd4fe44bef011193b54693",
+        "signature": "f4587a8bed7254ca0dd14cac880ead8effb0ca94fc840800268d3b0adf308fa8",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "a23fe7dc33c08c305fb9dbdba5d202ae6e9277d3b0d1e45698a41bfa3c17f89e",
-        "signature": "e01f504bf37f736b509d5d261243ed4bcce9f6d1e7e4615244aef17caa1c9922",
+        "version": "348527c2837517fddb9f876d9ffe142e89e23b10a9da80bf0541d89f9ec68650",
+        "signature": "b77e2022bde7566f853f48bae70c970a666ae458999e90502e0307ebe9b68ed2",
         "affectsGlobalScope": false
       },
       "./src/metro.config.macos.js": {
@@ -1736,6 +1736,7 @@
         "./src/RTCIceCandidate.ts",
         "./src/RTCPeerConnection.ts",
         "./src/RTCSessionDescription.ts",
+        "./src/RTCView.ts",
         "./src/getDisplayMedia.ts",
         "./src/getUserMedia.ts"
       ],
@@ -2619,6 +2620,9 @@
         "./src/RTCIceCandidate.ts",
         "./src/RTCSessionDescription.ts"
       ],
+      "./src/RTCView.ts": [
+        "./node_modules/@types/react-native/index.d.ts"
+      ],
       "./src/getUserMedia.ts": [
         "./src/MediaStream.ts"
       ],
@@ -2631,6 +2635,7 @@
         "./src/RTCIceCandidate.ts",
         "./src/RTCPeerConnection.ts",
         "./src/RTCSessionDescription.ts",
+        "./src/RTCView.ts",
         "./src/getDisplayMedia.ts",
         "./src/getUserMedia.ts"
       ]

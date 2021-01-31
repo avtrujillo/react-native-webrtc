@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RTCView = void 0;
 const react_native_1 = require("react-native");
 // import requireNativeComponent from 'requireNativeComponent';
 const prop_types_1 = __importDefault(require("prop-types"));
@@ -50,3 +51,4 @@ const RTCVideoView = {
         zOrder: prop_types_1.default.number
     },
 };
+exports.RTCView = react_native_1.requireNativeComponent('RTCVideoView');

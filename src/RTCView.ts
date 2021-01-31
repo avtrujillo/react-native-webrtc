@@ -58,7 +58,8 @@ const RTCVideoView = {
 };
 
 
-// export const RTCView = requireNativeComponent('RTCVideoView',  RTCVideoView, {nativeOnly: {
+export const RTCView = requireNativeComponent('RTCVideoView',
+// RTCVideoView, {nativeOnly: {
 //   testID: true,
 //   accessibilityComponentType: true,
 //   renderToHardwareTextureAndroid: true,
@@ -68,4 +69,4 @@ const RTCVideoView = {
 //   onLayout: true,
 //   nativeID: true,
 // }}
-// );
+);
